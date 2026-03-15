@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Yahya Benabdelkrim — GX2C</title>
+    <meta name="description" content="Carte de visite digitale — Yahya Benabdelkrim, Fondateur GX2C">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --off-white: #FAFAF8;
+            --cream: #F5F3EF;
+            --light-gray: #E8E6E1;
+            --mid-gray: #B8B5AD;
+            --text-secondary: #6B6860;
+            --text-primary: #1A1917;
+            --accent: #0F0F0E;
+            --accent-gold: #9A8C6C;
+            --accent-gold-light: #C4B79A;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'Manrope', -apple-system, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { font-size: 16px; }
+
+        body {
+            font-family: var(--sans);
+            color: var(--text-primary);
+            background: var(--cream);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        /* ========== CARD CONTAINER ========== */
+        .card-wrapper {
+            width: 100%;
+            max-width: 420px;
+            position: relative;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow:
+                0 1px 3px rgba(0,0,0,0.04),
+                0 8px 40px rgba(0,0,0,0.06);
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: cardIn 0.7s ease 0.15s forwards;
+        }
+
+        @keyframes cardIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ========== HEADER BAND ========== */
+        .card-header {
+            background: var(--text-primary);
+            padding: 36px 32px 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-header::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -20%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(154,140,108,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .card-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 32px;
+            right: 32px;
+            height: 1px;
+            background: rgba(255,255,255,0.08);
+        }
+
+        .card-logo {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 24px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .card-logo::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 1.5px;
+            background: var(--accent-gold);
+        }
+
+        .card-name {
+            font-family: var(--serif);
+            font-size: 1.85rem;
+            font-weight: 400;
+            color: var(--white);
+            letter-spacing: 0.01em;
+            line-height: 1.2;
+            margin-bottom: 8px;
+            opacity: 0;
+            animation: fadeUp 0.6s ease 0.4s forwards;
+        }
+
+        .card-role {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent-gold-light);
+            opacity: 0;
+            animation: fadeUp 0.6s ease 0.55s forwards;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ========== BODY ========== */
+        .card-body {
+            padding: 28px 32px 20px;
+        }
+
+        .card-section-label {
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 16px;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 13px 0;
+            border-bottom: 1px solid var(--cream);
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            opacity: 0;
+            animation: fadeUp 0.5s ease forwards;
+        }
+
+        .contact-row:nth-child(2) { animation-delay: 0.5s; }
+        .contact-row:nth-child(3) { animation-delay: 0.6s; }
+        .contact-row:nth-child(4) { animation-delay: 0.7s; }
+
+        .contact-row:last-child { border-bottom: none; }
+
+        .contact-row:hover {
+            padding-left: 6px;
+        }
+
+        .contact-row:active {
+            opacity: 0.7;
+        }
+
+        .contact-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: background 0.3s ease;
+        }
+
+        .contact-row:hover .contact-icon {
+            background: var(--accent-gold);
+        }
+
+        .contact-icon svg {
+            width: 15px;
+            height: 15px;
+            stroke: var(--text-secondary);
+            fill: none;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: stroke 0.3s ease;
+        }
+
+        .contact-row:hover .contact-icon svg {
+            stroke: var(--white);
+        }
+
+        .contact-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            min-width: 0;
+        }
+
+        .contact-text-label {
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--mid-gray);
+        }
+
+        .contact-text-value {
+            font-size: 0.88rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* ========== DIVIDER ========== */
+        .card-divider {
+            margin: 0 32px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--light-gray), transparent);
+        }
+
+        /* ========== QR CODE SECTION ========== */
+        .card-qr {
+            padding: 24px 32px 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            opacity: 0;
+            animation: fadeUp 0.5s ease 0.8s forwards;
+        }
+
+        .qr-label {
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+        }
+
+        .qr-container {
+            width: 160px;
+            height: 160px;
+            padding: 10px;
+            background: var(--white);
+            border: 1px solid var(--light-gray);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qr-container canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .qr-hint {
+            font-size: 0.72rem;
+            font-weight: 300;
+            color: var(--mid-gray);
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* ========== SAVE BUTTON ========== */
+        .card-actions {
+            padding: 0 32px 28px;
+            display: flex;
+            gap: 10px;
+            opacity: 0;
+            animation: fadeUp 0.5s ease 0.9s forwards;
+        }
+
+        .action-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-family: var(--sans);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 14px 20px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.35s ease;
+            text-decoration: none;
+        }
+
+        .action-btn svg {
+            width: 14px;
+            height: 14px;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        .action-btn-primary {
+            background: var(--text-primary);
+            color: var(--white);
+        }
+
+        .action-btn-primary svg { stroke: var(--white); }
+
+        .action-btn-primary:hover {
+            background: var(--accent-gold);
+            transform: translateY(-1px);
+        }
+
+        .action-btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .action-btn-secondary {
+            background: var(--cream);
+            color: var(--text-secondary);
+        }
+
+        .action-btn-secondary svg { stroke: var(--text-secondary); }
+
+        .action-btn-secondary:hover {
+            background: var(--light-gray);
+            color: var(--text-primary);
+        }
+
+        .action-btn-secondary:hover svg { stroke: var(--text-primary); }
+
+        /* ========== FOOTER ========== */
+        .card-footer {
+            background: var(--cream);
+            padding: 16px 32px;
+            text-align: center;
+        }
+
+        .card-footer-text {
+            font-size: 0.68rem;
+            font-weight: 400;
+            color: var(--mid-gray);
+            letter-spacing: 0.03em;
+        }
+
+        .card-footer-text a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .card-footer-text a:hover {
+            border-color: var(--accent-gold);
+        }
+
+        /* ========== TOAST ========== */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: var(--text-primary);
+            color: var(--white);
+            font-family: var(--sans);
+            font-size: 0.78rem;
+            font-weight: 500;
+            padding: 12px 24px;
+            border-radius: 2px;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.35s ease;
+            z-index: 100;
+            white-space: nowrap;
+        }
+
+        .toast.visible {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 480px) {
+            body { padding: 0; }
+
+            .card-wrapper {
+                max-width: 100%;
+                min-height: 100vh;
+                min-height: 100dvh;
+            }
+
+            .card {
+                border-radius: 0;
+                box-shadow: none;
+                min-height: 100vh;
+                min-height: 100dvh;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .card-body { flex: 1; }
+
+            .card-header {
+                padding: 44px 28px 28px;
+            }
+
+            .card-body { padding: 24px 28px 16px; }
+
+            .card-divider { margin: 0 28px; }
+
+            .card-qr { padding: 20px 28px 24px; }
+
+            .card-actions { padding: 0 28px 24px; }
+
+            .card-footer { padding: 14px 28px; }
+
+            .qr-container {
+                width: 140px;
+                height: 140px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .card-name { font-size: 1.6rem; }
+            .contact-text-value { font-size: 0.82rem; }
+        }
+
+        /* Safe area for notch phones */
+        @supports (padding-top: env(safe-area-inset-top)) {
+            .card-header {
+                padding-top: calc(36px + env(safe-area-inset-top));
+            }
+            .card-footer {
+                padding-bottom: calc(16px + env(safe-area-inset-bottom));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-wrapper">
+        <div class="card">
+
+            <!-- HEADER -->
+            <div class="card-header">
+                <div class="card-logo">GX2C</div>
+                <h1 class="card-name">Yahya Benabdelkrim</h1>
+                <div class="card-role">Fondateur</div>
+            </div>
+
+            <!-- CONTACT INFO -->
+            <div class="card-body">
+                <div class="card-section-label">Contact</div>
+
+                <a href="mailto:yahya.benabdelkrim@ybcparis.com" class="contact-row">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
+                    </div>
+                    <div class="contact-text">
+                        <span class="contact-text-label">Email</span>
+                        <span class="contact-text-value">yahya.benabdelkrim@ybcparis.com</span>
+                    </div>
+                </a>
+
+                <a href="tel:+33699233220" class="contact-row">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    </div>
+                    <div class="contact-text">
+                        <span class="contact-text-label">Téléphone</span>
+                        <span class="contact-text-value">06 99 23 32 20</span>
+                    </div>
+                </a>
+
+                <a href="https://ybcparis.com" target="_blank" rel="noopener" class="contact-row">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10A15.3 15.3 0 0112 2z"/></svg>
+                    </div>
+                    <div class="contact-text">
+                        <span class="contact-text-label">Web</span>
+                        <span class="contact-text-value">ybcparis.com</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-divider"></div>
+
+            <!-- QR CODE -->
+            <div class="card-qr">
+                <div class="qr-label">Scanner pour enregistrer</div>
+                <div class="qr-container">
+                    <canvas id="qrCanvas"></canvas>
+                </div>
+                <div class="qr-hint">Scannez pour ajouter le contact<br>à votre répertoire</div>
+            </div>
+
+            <!-- ACTIONS -->
+            <div class="card-actions">
+                <button class="action-btn action-btn-primary" id="saveContact">
+                    <svg viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                    Enregistrer
+                </button>
+                <button class="action-btn action-btn-secondary" id="shareBtn">
+                    <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                    Partager
+                </button>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="card-footer">
+                <div class="card-footer-text">
+                    <a href="https://ybcparis.com">ybcparis.com</a> · Advisory · Technology · Intelligence
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <!-- QR Code Generator (lightweight, no dependency) -->
+    <script>
+    // Minimal QR Code generator
+    (function(){function t(t){this.mode=4,this.data=t}function e(t,e){this.typeNumber=t,this.errorCorrectLevel=e,this.modules=null,this.moduleCount=0,this.dataCache=null,this.dataList=[]}t.prototype={getLength:function(){return this.data.length},write:function(t){for(var e=0;e<this.data.length;e++)t.put(this.data.charCodeAt(e),8)}},e.prototype={addData:function(e){this.dataList.push(new t(e)),this.dataCache=null},isDark:function(t,e){if(t<0||this.moduleCount<=t||e<0||this.moduleCount<=e)throw new Error(t+","+e);return this.modules[t][e]},getModuleCount:function(){return this.moduleCount},make:function(){this.makeImpl(!1,this.getBestMaskPattern())},makeImpl:function(t,o){this.moduleCount=4*this.typeNumber+17,this.modules=new Array(this.moduleCount);for(var n=0;n<this.moduleCount;n++){this.modules[n]=new Array(this.moduleCount);for(var r=0;r<this.moduleCount;r++)this.modules[n][r]=null}this.setupPositionProbePattern(0,0),this.setupPositionProbePattern(this.moduleCount-7,0),this.setupPositionProbePattern(0,this.moduleCount-7),this.setupPositionAdjustPattern(),this.setupTimingPattern(),this.setupTypeInfo(t,o),this.typeNumber>=7&&this.setupTypeNumber(t),null==this.dataCache&&(this.dataCache=e.createData(this.typeNumber,this.errorCorrectLevel,this.dataList)),this.mapData(this.dataCache,o)},setupPositionProbePattern:function(t,e){for(var o=-1;o<=7;o++)if(!(t+o<=-1||this.moduleCount<=t+o))for(var n=-1;n<=7;n++)e+n<=-1||this.moduleCount<=e+n||(this.modules[t+o][e+n]=0<=o&&o<=6&&(0==n||6==n)||0<=n&&n<=6&&(0==o||6==o)||2<=o&&o<=4&&2<=n&&n<=4)},getBestMaskPattern:function(){for(var t=0,e=0,o=0;o<8;o++){this.makeImpl(!0,o);var n=i.getLostPoint(this);(0==o||t>n)&&(t=n,e=o)}return e},setupTimingPattern:function(){for(var t=8;t<this.moduleCount-8;t++)null==this.modules[t][6]&&(this.modules[t][6]=t%2==0),null==this.modules[6][t]&&(this.modules[6][t]=t%2==0)},setupPositionAdjustPattern:function(){for(var t=i.getPatternPosition(this.typeNumber),e=0;e<t.length;e++)for(var o=0;o<t.length;o++){var n=t[e],r=t[o];if(null==this.modules[n][r])for(var s=-2;s<=2;s++)for(var a=-2;a<=2;a++)this.modules[n+s][r+a]=-2==s||2==s||-2==a||2==a||0==s&&0==a}},setupTypeNumber:function(t){for(var e=i.getBCHTypeNumber(this.typeNumber),o=0;o<18;o++){var n=!t&&1==(e>>o&1);this.modules[Math.floor(o/3)][o%3+this.moduleCount-8-3]=n}for(o=0;o<18;o++){n=!t&&1==(e>>o&1);this.modules[o%3+this.moduleCount-8-3][Math.floor(o/3)]=n}},setupTypeInfo:function(t,e){for(var o=this.errorCorrectLevel<<3|e,n=i.getBCHTypeInfo(o),r=0;r<15;r++){var s=!t&&1==(n>>r&1);r<6?this.modules[r][8]=s:r<8?this.modules[r+1][8]=s:this.modules[this.moduleCount-15+r][8]=s}for(r=0;r<15;r++){s=!t&&1==(n>>r&1);r<8?this.modules[8][this.moduleCount-r-1]=s:r<9?this.modules[8][15-r-1+1]=s:this.modules[8][15-r-1]=s}this.modules[this.moduleCount-8][8]=!t},mapData:function(t,e){for(var o=-1,n=this.moduleCount-1,r=7,s=0,a=this.moduleCount-1;a>0;a-=2)for(6==a&&a--;;){for(var l=0;l<2;l++)if(null==this.modules[n][a-l]){var h=!1;s<t.length&&(h=1==(t[s]>>>r&1)),i.getMask(e,n,a-l)&&(h=!h),this.modules[n][a-l]=h,-1==--r&&(s++,r=7)}if((n+=o)<0||this.moduleCount<=n){n-=o,o=-o;break}}}},e.PAD0=236,e.PAD1=17,e.createData=function(t,o,n){for(var r=i.getRSBlocks(t,o),a=new s,l=0;l<n.length;l++){var h=n[l];a.put(h.mode,4),a.put(h.getLength(),i.getLengthInBits(h.mode,t)),h.write(a)}var u=0;for(l=0;l<r.length;l++)u+=r[l].dataCount;if(a.getLengthInBits()>8*u)throw new Error("code length overflow. ("+a.getLengthInBits()+">"+8*u+")");for(a.getLengthInBits()+4<=8*u&&a.put(0,4);a.getLengthInBits()%8!=0;)a.putBit(!1);for(;!(a.getLengthInBits()>=8*u||(a.put(e.PAD0,8),a.getLengthInBits()>=8*u));)a.put(e.PAD1,8);return e.createBytes(a,r)},e.createBytes=function(t,e){for(var o=0,n=0,r=0,s=new Array(e.length),a=new Array(e.length),l=0;l<e.length;l++){var h=e[l].dataCount,u=e[l].totalCount-h;n=Math.max(n,h),r=Math.max(r,u),s[l]=new Array(h);for(var c=0;c<s[l].length;c++)s[l][c]=255&t.buffer[c+o];o+=h;var g=i.getErrorCorrectPolynomial(u),d=new f(s[l],g.getLength()-1).mod(g);a[l]=new Array(g.getLength()-1);for(c=0;c<a[l].length;c++){var p=c+d.getLength()-a[l].length;a[l][c]=p>=0?d.get(p):0}}var m=0;for(l=0;l<e.length;l++)m+=e[l].totalCount;var v=new Array(m),w=0;for(c=0;c<n;c++)for(l=0;l<e.length;l++)c<s[l].length&&(v[w++]=s[l][c]);for(c=0;c<r;c++)for(l=0;l<e.length;l++)c<a[l].length&&(v[w++]=a[l][c]);return v};for(var o=[1,0,0,0,1,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1,1,0,0,1,0,1,0,0,0,0,0,1,1,0,1,1,0,1,0,0,0,0,1,0,0,1,0,0,1,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,1,0,0,0,0,0,0,1,0,1,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0],n={},r=0;r<o.length;r++)n[r]=o[r];var i={PATTERN_POSITION_TABLE:[[],[6,18],[6,22],[6,26],[6,30],[6,34],[6,22,38],[6,24,42],[6,26,46],[6,28,50],[6,30,54],[6,32,58],[6,34,62],[6,26,46,66],[6,26,48,70],[6,26,50,74],[6,30,54,78],[6,30,56,82],[6,30,58,86],[6,34,62,90],[6,28,50,72,94],[6,26,50,74,98],[6,30,54,78,102],[6,28,54,80,106],[6,32,58,84,110],[6,30,58,86,114],[6,34,62,90,118],[6,26,50,74,98,122],[6,30,54,78,102,126],[6,26,52,78,104,130],[6,30,56,82,108,134],[6,34,60,86,112,138],[6,30,58,86,114,142],[6,34,62,90,118,146],[6,30,54,78,102,126,150],[6,24,50,76,102,128,154],[6,28,54,80,106,132,158],[6,32,58,84,110,136,162],[6,26,54,82,110,138,166],[6,30,58,86,114,142,170]],G15:1335,G18:7973,G15_MASK:21522,getBCHTypeInfo:function(t){for(var e=t<<10;i.getBCHDigit(e)-i.getBCHDigit(i.G15)>=0;)e^=i.G15<<i.getBCHDigit(e)-i.getBCHDigit(i.G15);return(t<<10|e)^i.G15_MASK},getBCHTypeNumber:function(t){for(var e=t<<12;i.getBCHDigit(e)-i.getBCHDigit(i.G18)>=0;)e^=i.G18<<i.getBCHDigit(e)-i.getBCHDigit(i.G18);return t<<12|e},getBCHDigit:function(t){for(var e=0;0!=t;)e++,t>>>=1;return e},getPatternPosition:function(t){return i.PATTERN_POSITION_TABLE[t-1]},getMask:function(t,e,o){switch(t){case 0:return(e+o)%2==0;case 1:return e%2==0;case 2:return o%3==0;case 3:return(e+o)%3==0;case 4:return(Math.floor(e/2)+Math.floor(o/3))%2==0;case 5:return e*o%2+e*o%3==0;case 6:return(e*o%2+e*o%3)%2==0;case 7:return(e*o%3+(e+o)%2)%2==0;default:throw new Error("bad maskPattern:"+t)}},getErrorCorrectPolynomial:function(t){for(var e=new f([1],0),o=0;o<t;o++)e=e.multiply(new f([1,a.gexp(o)],0));return e},getLengthInBits:function(t,e){if(1<=e&&e<10)switch(t){case 1:return 10;case 2:return 9;case 4:return 8;case 8:return 8;default:throw new Error("mode:"+t)}else if(e<27)switch(t){case 1:return 12;case 2:return 11;case 4:return 16;case 8:return 10;default:throw new Error("mode:"+t)}else{if(!(e<41))throw new Error("type:"+e);switch(t){case 1:return 14;case 2:return 13;case 4:return 16;case 8:return 12;default:throw new Error("mode:"+t)}}},getLostPoint:function(t){for(var e=t.getModuleCount(),o=0,n=0;n<e;n++)for(var r=0;r<e;r++){for(var i=0,s=t.isDark(n,r),a=-1;a<=1;a++)if(!(n+a<0||e<=n+a))for(var l=-1;l<=1;l++)r+l<0||e<=r+l||0==a&&0==l||s==t.isDark(n+a,r+l)&&i++;i>5&&(o+=3+i-5)}for(n=0;n<e-1;n++)for(r=0;r<e-1;r++){var f=0;t.isDark(n,r)&&f++,t.isDark(n+1,r)&&f++,t.isDark(n,r+1)&&f++,t.isDark(n+1,r+1)&&f++,0!=f&&4!=f||(o+=3)}for(n=0;n<e;n++)for(r=0;r<e-6;r++)t.isDark(n,r)&&!t.isDark(n,r+1)&&t.isDark(n,r+2)&&t.isDark(n,r+3)&&t.isDark(n,r+4)&&!t.isDark(n,r+5)&&t.isDark(n,r+6)&&(o+=40);for(r=0;r<e;r++)for(n=0;n<e-6;n++)t.isDark(n,r)&&!t.isDark(n+1,r)&&t.isDark(n+2,r)&&t.isDark(n+3,r)&&t.isDark(n+4,r)&&!t.isDark(n+5,r)&&t.isDark(n+6,r)&&(o+=40);var h=0;for(r=0;r<e;r++)for(n=0;n<e;n++)t.isDark(n,r)&&h++;return o+=10*(Math.abs(100*h/e/e-50)/5)},getRSBlocks:function(t,e){var o=i.getRsBlockTable(t,e);if(void 0==o)throw new Error("bad rs block @ typeNumber:"+t+"/errorCorrectLevel:"+e);for(var n=o.length/3,r=[],s=0;s<n;s++)for(var a=o[3*s],l=o[3*s+1],f=o[3*s+2],h=0;h<a;h++)r.push({totalCount:l,dataCount:f});return r},getRsBlockTable:function(t,e){switch(e){case 1:return[[1,26,19],[1,26,16],[1,26,13],[1,26,9],[1,44,34],[1,44,28],[1,44,22],[1,44,16],[1,70,55],[1,70,44],[2,35,17],[2,35,13],[1,100,80],[2,50,32],[2,50,24],[4,25,9],[1,134,108],[2,67,43],[2,33,15,2,34,16],[2,33,11,2,34,12],[2,86,68],[4,43,27],[4,43,19],[4,43,15],[2,98,78],[4,49,31],[2,32,14,4,33,15],[4,39,13,1,40,14],[2,121,97],[2,60,38,2,61,39],[4,40,18,2,41,19],[4,40,14,2,41,15],[2,146,116],[3,58,36,2,59,37],[4,36,16,4,37,17],[4,36,12,4,37,13],[2,86,68,2,87,69],[4,69,43,1,70,44],[6,43,19,2,44,20],[6,43,15,2,44,16],[4,101,81],[1,80,50,4,81,51],[4,50,22,4,51,23],[3,36,12,8,37,13],[2,116,92,2,117,93],[6,58,36,2,59,37],[4,46,20,6,47,21],[7,42,14,4,43,15],[4,133,107],[8,59,37,1,60,38],[8,44,20,4,45,21],[12,33,11,4,34,12],[3,145,115,1,146,116],[4,64,40,5,65,41],[11,36,16,5,37,17],[11,36,12,5,37,13],[5,109,87,1,110,88],[5,65,41,5,66,42],[5,54,24,7,55,25],[11,36,12],[5,122,98,1,123,99],[7,73,45,3,74,46],[15,43,19,2,44,20],[3,45,15,13,46,16],[1,135,107,5,136,108],[10,74,46,1,75,47],[1,50,22,15,51,23],[2,42,14,17,43,15],[5,150,120,1,151,121],[9,69,43,4,70,44],[17,50,22,1,51,23],[2,42,14,19,43,15],[3,141,113,4,142,114],[3,70,44,11,71,45],[17,47,21,4,48,22],[9,39,13,16,40,14],[3,135,107,5,136,108],[3,67,41,13,68,42],[15,54,24,5,55,25],[15,43,15,10,44,16],[4,144,116,4,145,117],[17,68,42],[17,50,22,6,51,23],[19,46,16,6,47,17],[2,139,111,7,140,112],[17,74,46],[7,54,24,16,55,25],[34,37,13],[4,151,121,5,152,122],[4,75,47,14,76,48],[11,54,24,14,55,25],[16,45,15,14,46,16],[6,147,117,4,148,118],[6,73,45,14,74,46],[11,54,24,16,55,25],[30,46,16,2,47,17],[8,132,106,4,133,107],[8,75,47,13,76,48],[7,54,24,22,55,25],[22,45,15,13,46,16],[10,142,114,2,143,115],[19,74,46,4,75,47],[28,50,22,6,51,23],[33,46,16,4,47,17],[8,152,122,4,153,123],[22,73,45,3,74,46],[8,53,23,26,54,24],[12,45,15,28,46,16],[3,147,117,10,148,118],[3,73,45,23,74,46],[4,54,24,31,55,25],[11,45,15,31,46,16],[7,146,116,7,147,117],[21,73,45,7,74,46],[1,53,23,37,54,24],[19,45,15,26,46,16],[5,145,115,10,146,116],[19,75,47,10,76,48],[15,54,24,25,55,25],[23,45,15,25,46,16],[13,145,115,3,146,116],[2,74,46,29,75,47],[42,54,24,1,55,25],[23,45,15,28,46,16],[17,145,115],[10,74,46,23,75,47],[10,54,24,35,55,25],[19,45,15,35,46,16],[17,145,115,1,146,116],[14,74,46,21,75,47],[29,54,24,19,55,25],[11,45,15,46,46,16],[13,145,115,6,146,116],[14,74,46,23,75,47],[44,54,24,7,55,25],[59,46,16,1,47,17],[12,151,121,7,152,122],[12,75,47,26,76,48],[39,54,24,14,55,25],[22,45,15,41,46,16],[6,151,121,14,152,122],[6,75,47,34,76,48],[46,54,24,10,55,25],[2,45,15,64,46,16],[17,152,122,4,153,123],[29,74,46,14,75,47],[49,54,24,10,55,25],[24,45,15,46,46,16],[4,152,122,18,153,123],[13,74,46,32,75,47],[48,54,24,14,55,25],[42,45,15,32,46,16],[20,147,117,4,148,118],[40,75,47,7,76,48],[43,54,24,22,55,25],[10,45,15,67,46,16],[19,148,118,6,149,119],[18,75,47,31,76,48],[34,54,24,34,55,25],[20,45,15,61,46,16]][4*(t-1)+(e={1:0,0:1,3:2,2:3}[e])];default:return}}};var a={glog:function(t){if(t<1)throw new Error("glog("+t+")");return a.LOG_TABLE[t]},gexp:function(t){for(;t<0;)t+=255;for(;t>=256;)t-=255;return a.EXP_TABLE[t]},EXP_TABLE:new Array(256),LOG_TABLE:new Array(256)};for(r=0;r<8;r++)a.EXP_TABLE[r]=1<<r;for(r=8;r<256;r++)a.EXP_TABLE[r]=a.EXP_TABLE[r-4]^a.EXP_TABLE[r-5]^a.EXP_TABLE[r-6]^a.EXP_TABLE[r-8];for(r=0;r<255;r++)a.LOG_TABLE[a.EXP_TABLE[r]]=r;function f(t,e){if(void 0==t.length)throw new Error(t.length+"/"+e);for(var o=0;o<t.length&&0==t[o];)o++;this.num=new Array(t.length-o+e);for(var n=0;n<t.length-o;n++)this.num[n]=t[n+o]}function s(){this.buffer=[],this.length=0}f.prototype={get:function(t){return this.num[t]},getLength:function(){return this.num.length},multiply:function(t){for(var e=new Array(this.getLength()+t.getLength()-1),o=0;o<this.getLength();o++)for(var n=0;n<t.getLength();n++)e[o+n]^=a.gexp(a.glog(this.get(o))+a.glog(t.get(n)));return new f(e,0)},mod:function(t){if(this.getLength()-t.getLength()<0)return this;for(var e=a.glog(this.get(0))-a.glog(t.get(0)),o=new Array(this.getLength()),n=0;n<this.getLength();n++)o[n]=this.get(n);for(n=0;n<t.getLength();n++)o[n]^=a.gexp(a.glog(t.get(n))+e);return new f(o,0).mod(t)}},s.prototype={get:function(t){var e=Math.floor(t/8);return 1==(this.buffer[e]>>>7-t%8&1)},put:function(t,e){for(var o=0;o<e;o++)this.putBit(1==(t>>>e-o-1&1))},getLengthInBits:function(){return this.length},putBit:function(t){var e=Math.floor(this.length/8);this.buffer.length<=e&&this.buffer.push(0),t&&(this.buffer[e]|=128>>>this.length%8),this.length++}},window.QRCode=e})();
+
+    // vCard data
+    const vcard = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'N:Benabdelkrim;Yahya;;;',
+        'FN:Yahya Benabdelkrim',
+        'ORG:GX2C - YBC Paris',
+        'TITLE:Fondateur',
+        'TEL;TYPE=CELL:+33699233220',
+        'EMAIL:yahya.benabdelkrim@ybcparis.com',
+        'URL:https://ybcparis.com',
+        'ADR;TYPE=WORK:;;99 avenue Achille Peretti;Neuilly-sur-Seine;;92200;France',
+        'END:VCARD'
+    ].join('\n');
+
+    // Generate QR code
+    function generateQR() {
+        const canvas = document.getElementById('qrCanvas');
+        // Try different type numbers until data fits
+        let qr;
+        for (let typeNum = 6; typeNum <= 20; typeNum++) {
+            try {
+                qr = new QRCode(typeNum, 1); // 1 = error correct level L
+                qr.addData(vcard);
+                qr.make();
+                break;
+            } catch(e) {
+                continue;
+            }
+        }
+        if (!qr) return;
+
+        const count = qr.getModuleCount();
+        const size = 280; // canvas resolution
+        canvas.width = size;
+        canvas.height = size;
+        const ctx = canvas.getContext('2d');
+        const cellSize = size / count;
+
+        // White background
+        ctx.fillStyle = '#FFFFFF';
+        ctx.fillRect(0, 0, size, size);
+
+        // Draw modules
+        ctx.fillStyle = '#1A1917';
+        for (let row = 0; row < count; row++) {
+            for (let col = 0; col < count; col++) {
+                if (qr.isDark(row, col)) {
+                    ctx.fillRect(
+                        col * cellSize,
+                        row * cellSize,
+                        Math.ceil(cellSize),
+                        Math.ceil(cellSize)
+                    );
+                }
+            }
+        }
+    }
+
+    generateQR();
+
+    // Save contact (download vCard)
+    document.getElementById('saveContact').addEventListener('click', function() {
+        const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Yahya_Benabdelkrim_GX2C.vcf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast('Contact téléchargé');
+    });
+
+    // Share button
+    document.getElementById('shareBtn').addEventListener('click', async function() {
+        const shareData = {
+            title: 'Yahya Benabdelkrim — GX2C',
+            text: 'Carte de visite de Yahya Benabdelkrim, Fondateur GX2C',
+            url: window.location.href
+        };
+
+        if (navigator.share) {
+            try {
+                await navigator.share(shareData);
+            } catch(e) {
+                // User cancelled
+            }
+        } else {
+            // Fallback: copy URL
+            try {
+                await navigator.clipboard.writeText(window.location.href);
+                showToast('Lien copié dans le presse-papier');
+            } catch(e) {
+                showToast('Impossible de copier le lien');
+            }
+        }
+    });
+
+    // Toast notification
+    function showToast(msg) {
+        const toast = document.getElementById('toast');
+        toast.textContent = msg;
+        toast.classList.add('visible');
+        setTimeout(() => toast.classList.remove('visible'), 2500);
+    }
+    </script>
+
+</body>
+</html>
