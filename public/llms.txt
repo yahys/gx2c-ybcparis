@@ -1,0 +1,38 @@
+# GX2C (YB Consulting)
+
+> GX2C is a Paris-based strategic advisory firm at the intersection of Capital Markets, Treasury, and Artificial Intelligence. Legal name: YB Consulting. Website: ybcparis.com.
+
+## Identity
+- Commercial name: GX2C
+- Legal entity: YB Consulting (EURL)
+- Founded: 2018
+- Founder: Yahya Benabdelkrim
+- Location: 99 avenue Achille Peretti, 92200 Neuilly-sur-Seine, France
+- Website: https://ybcparis.com
+- Contact: contact@ybcparis.com
+
+## What we do
+GX2C operates two complementary verticals:
+
+### Advisory
+Strategic consulting for financial institutions and large corporates:
+- Capital Markets: trading systems, market infrastructure, post-trade, regulatory compliance (MiFID II, EMIR, SFTR)
+- Treasury: cash management, FX hedging, liquidity optimization, payment systems (SEPA, SWIFT, TARGET2)
+- SI Transformation: core banking migration, fintech integration, cloud infrastructure
+- Regulatory: EU AI Act compliance, PSD2/PSD3, Basel IV
+
+### AI Products
+Proprietary AI solutions built for finance:
+- Intelligent document processing (invoice OCR, receipt extraction)
+- AI agents for financial workflows (reconciliation, classification)
+- LLM-powered analytics (treasury forecasting, market analysis)
+- Custom ML models for risk and compliance
+
+## Clients
+SNCF, SNCF Reseau, Societe des Grands Projets, Ernst & Young (EY), 3V Finance, Kouver
+
+## Expertise keywords
+Capital Markets, Treasury, Artificial Intelligence, LLM, Machine Learning, Regulatory Compliance, MiFID II, EMIR, SFTR, PSD2, Basel IV, EU AI Act, Fintech, Core Banking, Post-Trade, SWIFT, TARGET2, SEPA
+
+## Blog
+https://ybcparis.com/blog — Expert insights on AI in finance, capital markets trends, treasury automation

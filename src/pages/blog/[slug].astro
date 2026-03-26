@@ -1,0 +1,409 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+function formatDate(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString('fr-FR', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.data.title,
+  "description": post.data.description,
+  "datePublished": post.data.publishedDate,
+  "author": {
+    "@type": "Organization",
+    "name": post.data.author,
+    "url": "https://ybcparis.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "GX2C",
+    "url": "https://ybcparis.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ybcparis.com/favicon.svg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://ybcparis.com/blog/${post.id}/`
+  },
+  "keywords": post.data.tags.join(', ')
+};
+---
+
+<Base
+  title={`${post.data.title} — GX2C Blog`}
+  description={post.data.description}
+  ogType="article"
+  jsonLd={articleJsonLd}
+>
+
+<nav id="navbar" class="scrolled">
+    <div class="nav-inner">
+        <a href="/" class="logo">GX2C</a>
+        <ul class="nav-links">
+            <li><a href="/#expertise">Nos metiers</a></li>
+            <li><a href="/#clients">Clients</a></li>
+            <li><a href="/blog" class="active">Blog</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<article class="article-page">
+    <header class="article-header">
+        <div class="section-inner">
+            <a href="/blog/" class="back-link">&larr; Retour au blog</a>
+            <div class="article-meta">
+                <span class="article-category">{post.data.category}</span>
+                <time datetime={post.data.publishedDate}>{formatDate(post.data.publishedDate)}</time>
+                <span class="article-author">par {post.data.author}</span>
+            </div>
+            <h1 class="article-title">{post.data.title}</h1>
+            <p class="article-desc">{post.data.description}</p>
+            <div class="article-tags">
+                {post.data.tags.map((tag: string) => (
+                    <span class="post-tag">{tag}</span>
+                ))}
+            </div>
+        </div>
+    </header>
+
+    <div class="article-body">
+        <div class="prose">
+            <Content />
+        </div>
+    </div>
+
+    <aside class="article-cta">
+        <div class="section-inner">
+            <div class="cta-card">
+                <h2>Discutons de votre projet</h2>
+                <p>Vous souhaitez explorer comment l'IA et nos expertises peuvent accelerer votre transformation ? Contactez-nous.</p>
+                <a href="/#contact" class="cta-btn">
+                    Prendre contact
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </aside>
+</article>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">GX2C</div>
+        <div class="footer-text">&copy; 2025 GX2C — YB Consulting. All rights reserved.</div>
+    </div>
+</footer>
+
+<style>
+    /* NAV */
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(255,255,255,0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--light-gray);
+    }
+    .nav-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 60px;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo {
+        font-family: var(--serif);
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        color: var(--text-primary);
+        text-decoration: none;
+    }
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 36px;
+        align-items: center;
+    }
+    .nav-links a {
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    .nav-links a:hover, .nav-links a.active {
+        color: var(--text-primary);
+    }
+
+    /* ARTICLE HEADER */
+    .article-page {
+        padding-top: 72px;
+    }
+    .article-header {
+        padding: 80px 60px 60px;
+        background: var(--off-white);
+        border-bottom: 1px solid var(--light-gray);
+    }
+    .section-inner {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .back-link {
+        display: inline-block;
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--accent-gold);
+        text-decoration: none;
+        margin-bottom: 32px;
+        transition: color 0.3s ease;
+    }
+    .back-link:hover { color: var(--text-primary); }
+    .article-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        font-size: 0.78rem;
+        color: var(--text-secondary);
+    }
+    .article-category {
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent-gold);
+        font-size: 0.7rem;
+    }
+    .article-title {
+        font-family: var(--serif);
+        font-size: 2.8rem;
+        font-weight: 400;
+        line-height: 1.2;
+        color: var(--text-primary);
+        margin-bottom: 16px;
+    }
+    .article-desc {
+        font-size: 1.1rem;
+        font-weight: 300;
+        line-height: 1.7;
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+    }
+    .article-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .post-tag {
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        padding: 4px 12px;
+        background: var(--cream);
+        color: var(--text-secondary);
+        border-radius: 2px;
+    }
+
+    /* ARTICLE BODY — PROSE STYLES */
+    .article-body {
+        padding: 60px;
+        background: var(--white);
+    }
+    .prose {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 1.05rem;
+        font-weight: 300;
+        line-height: 1.85;
+        color: var(--text-primary);
+    }
+    .prose :global(h2) {
+        font-family: var(--serif);
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: var(--text-primary);
+        margin-top: 48px;
+        margin-bottom: 20px;
+        line-height: 1.3;
+    }
+    .prose :global(h3) {
+        font-family: var(--serif);
+        font-size: 1.35rem;
+        font-weight: 500;
+        color: var(--text-primary);
+        margin-top: 36px;
+        margin-bottom: 16px;
+    }
+    .prose :global(p) {
+        margin-bottom: 20px;
+    }
+    .prose :global(strong) {
+        font-weight: 600;
+        color: var(--text-primary);
+    }
+    .prose :global(a) {
+        color: var(--accent-gold);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        transition: color 0.3s ease;
+    }
+    .prose :global(a:hover) {
+        color: var(--text-primary);
+    }
+    .prose :global(ul), .prose :global(ol) {
+        margin-bottom: 20px;
+        padding-left: 24px;
+    }
+    .prose :global(li) {
+        margin-bottom: 8px;
+    }
+    .prose :global(blockquote) {
+        border-left: 3px solid var(--accent-gold);
+        padding: 16px 24px;
+        margin: 32px 0;
+        background: var(--off-white);
+        font-style: italic;
+        color: var(--text-secondary);
+    }
+    .prose :global(code) {
+        font-size: 0.9em;
+        background: var(--cream);
+        padding: 2px 6px;
+        border-radius: 2px;
+    }
+    .prose :global(pre) {
+        background: var(--text-primary);
+        color: var(--cream);
+        padding: 24px;
+        margin: 32px 0;
+        overflow-x: auto;
+        border-radius: 2px;
+    }
+    .prose :global(pre code) {
+        background: none;
+        padding: 0;
+        color: inherit;
+    }
+    .prose :global(hr) {
+        border: none;
+        height: 1px;
+        background: var(--light-gray);
+        margin: 40px 0;
+    }
+
+    /* CTA SECTION */
+    .article-cta {
+        padding: 80px 60px;
+        background: var(--off-white);
+    }
+    .cta-card {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 60px 40px;
+        background: var(--text-primary);
+        color: var(--white);
+    }
+    .cta-card h2 {
+        font-family: var(--serif);
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 16px;
+    }
+    .cta-card p {
+        font-size: 0.95rem;
+        font-weight: 300;
+        line-height: 1.7;
+        color: rgba(255,255,255,0.7);
+        margin-bottom: 32px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--sans);
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--text-primary);
+        background: var(--white);
+        padding: 16px 36px;
+        text-decoration: none;
+        transition: all 0.35s ease;
+    }
+    .cta-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+    .cta-btn:hover {
+        background: var(--accent-gold-light);
+        color: var(--text-primary);
+        transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+        background: var(--text-primary);
+        padding: 40px 60px;
+    }
+    .footer-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .footer-logo {
+        font-family: var(--serif);
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        color: rgba(255,255,255,0.8);
+    }
+    .footer-text {
+        font-size: 0.78rem;
+        color: rgba(255,255,255,0.4);
+    }
+
+    @media (max-width: 768px) {
+        .article-header { padding: 60px 24px 40px; }
+        .article-title { font-size: 2rem; }
+        .article-body { padding: 40px 24px; }
+        .article-cta { padding: 60px 24px; }
+        .cta-card { padding: 40px 24px; }
+        .nav-inner { padding: 0 24px; }
+        footer { padding: 32px 24px; }
+    }
+</style>
+
+</Base>

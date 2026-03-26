@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ybcparis.com/sitemap-index.xml

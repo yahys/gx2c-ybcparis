@@ -1,0 +1,329 @@
+---
+import Base from '../layouts/Base.astro';
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce que GX2C ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GX2C (YB Consulting) est un cabinet de conseil strategique base a Paris, specialise dans les marches de capitaux, la tresorerie et l'intelligence artificielle. Nous accompagnons les institutions financieres et grands comptes dans leurs transformations les plus critiques."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels services propose GX2C ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GX2C opere sur deux verticales : Advisory (Capital Markets, Tresorerie, conformite reglementaire, transformation SI) et AI Products (agents IA, machine learning, data engineering, LLM). Du cadrage strategique au delivery operationnel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels clients travaillent avec GX2C ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GX2C accompagne des acteurs majeurs comme SNCF, SNCF Reseau, Societe des Grands Projets, Ernst & Young (EY), 3V Finance et Kouver dans leurs projets de transformation et d'innovation IA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ou est situe GX2C ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GX2C est situe au 99 avenue Achille Peretti, 92200 Neuilly-sur-Seine, France. Contactez-nous a contact@ybcparis.com."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle est l'expertise IA de GX2C ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GX2C concoit et deploie des produits d'IA proprietaires pour la finance : traitement intelligent de documents (OCR factures), agents IA pour workflows financiers (reconciliation, classification), analytics predictif (tresorerie, marches), et modeles LLM sur mesure pour le risque et la conformite."
+      }
+    }
+  ]
+};
+---
+
+<Base
+  title="GX2C — Strategic Advisory & AI Solutions | Capital Markets, Treasury, AI"
+  description="GX2C (YB Consulting) est un cabinet de conseil strategique specialise dans les marches de capitaux, la tresorerie et l'intelligence artificielle. Nous transformons la complexite en avantage competitif."
+  jsonLd={faqJsonLd}
+>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+    <div class="nav-inner">
+        <a href="#" class="logo">GX2C</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li>
+                <a href="#expertise">
+                    <span data-lang-inline="fr">Nos metiers</span>
+                    <span data-lang-inline="en">Our expertise</span>
+                </a>
+            </li>
+            <li>
+                <a href="#clients">
+                    <span data-lang-inline="fr">Clients</span>
+                    <span data-lang-inline="en">Clients</span>
+                </a>
+            </li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <button class="lang-toggle" id="langToggle">EN</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="hero-content">
+        <div class="hero-tag">
+            <span data-lang-inline="fr">Advisory &middot; Technology &middot; Intelligence</span>
+            <span data-lang-inline="en">Advisory &middot; Technology &middot; Intelligence</span>
+        </div>
+        <h1 data-lang="fr">Nous transformons la <em>complexite</em><br>en avantage competitif</h1>
+        <h1 data-lang="en">We turn <em>complexity</em><br>into competitive advantage</h1>
+        <p class="hero-sub" data-lang="fr">
+            Cabinet de conseil strategique a la croisee de la Finance de Marche, de la Tresorerie et de l'Intelligence Artificielle. Nous concevons les solutions qui redefinissent la performance.
+        </p>
+        <p class="hero-sub" data-lang="en">
+            Strategic advisory firm at the intersection of Capital Markets, Treasury and Artificial Intelligence. We design the solutions that redefine performance.
+        </p>
+        <a href="#contact" class="hero-cta">
+            <span data-lang-inline="fr">Parlons de votre projet</span>
+            <span data-lang-inline="en">Let's discuss your project</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+    </div>
+</section>
+
+<!-- TWO PILLARS -->
+<section class="pillars" id="expertise">
+    <div class="section-inner">
+        <div class="pillars-header reveal">
+            <div class="section-tag">
+                <span data-lang-inline="fr">Ce que nous faisons</span>
+                <span data-lang-inline="en">What we do</span>
+            </div>
+            <h2 class="section-title" data-lang="fr">Deux metiers,<br>une seule exigence</h2>
+            <h2 class="section-title" data-lang="en">Two disciplines,<br>one standard of excellence</h2>
+        </div>
+
+        <div class="pillars-grid">
+            <div class="pillar reveal">
+                <div class="pillar-number">01</div>
+                <h3 class="pillar-title" data-lang="fr">Advisory</h3>
+                <h3 class="pillar-title" data-lang="en">Advisory</h3>
+                <div class="pillar-line"></div>
+                <p class="pillar-desc" data-lang="fr">Nous accompagnons les institutions financieres et les grands comptes dans leurs programmes de transformation les plus critiques — systemes d'information, Finance de Marche, Tresorerie, conformite reglementaire. Du cadrage strategique au delivery operationnel.</p>
+                <p class="pillar-desc" data-lang="en">We support financial institutions and large corporates through their most critical transformation programs — information systems, Capital Markets, Treasury, regulatory compliance. From strategic scoping to operational delivery.</p>
+                <div class="pillar-tags">
+                    <span>Capital Markets</span>
+                    <span>Treasury</span>
+                    <span>Regulatory</span>
+                    <span>SI Transformation</span>
+                </div>
+            </div>
+
+            <div class="pillar reveal">
+                <div class="pillar-number">02</div>
+                <h3 class="pillar-title" data-lang="fr">AI Products</h3>
+                <h3 class="pillar-title" data-lang="en">AI Products</h3>
+                <div class="pillar-line"></div>
+                <p class="pillar-desc" data-lang="fr">Nous concevons et deployons des produits d'intelligence artificielle proprietaires qui augmentent la performance de nos clients — automatisation intelligente, analytics predictif, agents IA. De l'idee au produit en production.</p>
+                <p class="pillar-desc" data-lang="en">We design and deploy proprietary artificial intelligence products that amplify our clients' performance — intelligent automation, predictive analytics, AI agents. From idea to product in production.</p>
+                <div class="pillar-tags">
+                    <span>AI Agents</span>
+                    <span>Machine Learning</span>
+                    <span>Data Engineering</span>
+                    <span>LLM</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CLIENTS / TRUST -->
+<section class="trust" id="clients">
+    <div class="section-inner">
+        <div class="trust-header reveal">
+            <div class="section-tag">
+                <span data-lang-inline="fr">Ils nous font confiance</span>
+                <span data-lang-inline="en">They trust us</span>
+            </div>
+            <h2 class="section-title" data-lang="fr">Des partenaires d'exception</h2>
+            <h2 class="section-title" data-lang="en">Exceptional partners</h2>
+        </div>
+
+        <div class="marquee-wrapper reveal">
+            <div class="marquee">
+                <div class="marquee-track">
+                    <div class="trust-logo-img"><img src="https://upload.wikimedia.org/wikipedia/fr/a/a1/Logo_SNCF_%282011%29.svg" alt="SNCF SA - client GX2C" loading="lazy" width="150" height="38"></div>
+                    <div class="trust-logo-img"><img src="https://upload.wikimedia.org/wikipedia/fr/e/ec/Logo_SNCF_R%C3%A9seau_2015.svg" alt="SNCF Reseau - client GX2C" loading="lazy" width="150" height="38"></div>
+                    <div class="trust-logo-img"><img src="https://upload.wikimedia.org/wikipedia/fr/e/e7/Soci%C3%A9t%C3%A9_des_Grands_Projets_Logo.svg" alt="Societe des Grands Projets - client GX2C" loading="lazy" width="150" height="38"></div>
+                    <div class="trust-logo-img"><img src="https://upload.wikimedia.org/wikipedia/commons/3/34/EY_logo_2019.svg" alt="Ernst and Young EY - client GX2C" loading="lazy" width="150" height="38"></div>
+                    <div class="trust-logo-img logo-dark-bg"><img src="https://www.3vfinance.com/hubfs/3VF_2026_white_Transp.png" alt="3V Finance - client GX2C" loading="lazy" width="150" height="28"></div>
+                    <div class="trust-logo-img"><img src="https://www.kouver.fr/wp-content/uploads/2026/01/Kouver-logo-rose.svg#151" alt="Kouver - client GX2C" loading="lazy" width="150" height="38"></div>
+                    <div class="trust-logo-more">
+                        <span data-lang-inline="fr">et bien d'autres...</span>
+                        <span data-lang-inline="en">and many more...</span>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="trust-logo-img"><img src="https://upload.wikimedia.org/wikipedia/fr/a/a1/Logo_SNCF_%282011%29.svg" alt="SNCF SA" loading="lazy" width="150" height="38"></div>
+                    <div class="trust-logo-img"><img src="https://upload.wikimedia.org/wikipedia/fr/e/ec/Logo_SNCF_R%C3%A9seau_2015.svg" alt="SNCF Reseau" loading="lazy" width="150" height="38"></div>
+                    <div class="trust-logo-img"><img src="https://upload.wikimedia.org/wikipedia/fr/e/e7/Soci%C3%A9t%C3%A9_des_Grands_Projets_Logo.svg" alt="Societe des Grands Projets" loading="lazy" width="150" height="38"></div>
+                    <div class="trust-logo-img"><img src="https://upload.wikimedia.org/wikipedia/commons/3/34/EY_logo_2019.svg" alt="Ernst and Young" loading="lazy" width="150" height="38"></div>
+                    <div class="trust-logo-img logo-dark-bg"><img src="https://www.3vfinance.com/hubfs/3VF_2026_white_Transp.png" alt="3V Finance" loading="lazy" width="150" height="28"></div>
+                    <div class="trust-logo-img"><img src="https://www.kouver.fr/wp-content/uploads/2026/01/Kouver-logo-rose.svg#151" alt="Kouver" loading="lazy" width="150" height="38"></div>
+                    <div class="trust-logo-more">
+                        <span data-lang-inline="fr">et bien d'autres...</span>
+                        <span data-lang-inline="en">and many more...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="trust-divider"></div>
+
+        <div class="trust-quote reveal">
+            <p data-lang="fr">"L'excellence n'est pas un acte, c'est une habitude que nous cultivons a chaque mission."</p>
+            <p data-lang="en">"Excellence is not an act, it is a habit we cultivate with every engagement."</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" style="background: var(--white); padding: 100px 60px;">
+    <div class="section-inner">
+        <div class="section-tag">FAQ</div>
+        <h2 class="section-title" data-lang="fr">Questions frequentes</h2>
+        <h2 class="section-title" data-lang="en">Frequently asked questions</h2>
+        <div style="margin-top: 48px; max-width: 800px;">
+            <details style="border-bottom: 1px solid var(--light-gray); padding: 20px 0;">
+                <summary style="font-family: var(--serif); font-size: 1.2rem; cursor: pointer; color: var(--text-primary);">Qu'est-ce que GX2C ?</summary>
+                <p style="margin-top: 12px; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;">GX2C (YB Consulting) est un cabinet de conseil strategique base a Paris, specialise dans les marches de capitaux, la tresorerie et l'intelligence artificielle. Nous accompagnons les institutions financieres et grands comptes dans leurs transformations les plus critiques.</p>
+            </details>
+            <details style="border-bottom: 1px solid var(--light-gray); padding: 20px 0;">
+                <summary style="font-family: var(--serif); font-size: 1.2rem; cursor: pointer; color: var(--text-primary);">Quels services propose GX2C ?</summary>
+                <p style="margin-top: 12px; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;">Advisory (Capital Markets, Tresorerie, conformite reglementaire, transformation SI) et AI Products (agents IA, machine learning, data engineering, LLM). Du cadrage strategique au delivery operationnel.</p>
+            </details>
+            <details style="border-bottom: 1px solid var(--light-gray); padding: 20px 0;">
+                <summary style="font-family: var(--serif); font-size: 1.2rem; cursor: pointer; color: var(--text-primary);">Quels clients travaillent avec GX2C ?</summary>
+                <p style="margin-top: 12px; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;">SNCF, SNCF Reseau, Societe des Grands Projets, Ernst & Young (EY), 3V Finance et Kouver.</p>
+            </details>
+            <details style="border-bottom: 1px solid var(--light-gray); padding: 20px 0;">
+                <summary style="font-family: var(--serif); font-size: 1.2rem; cursor: pointer; color: var(--text-primary);">Quelle est l'expertise IA de GX2C ?</summary>
+                <p style="margin-top: 12px; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;">Traitement intelligent de documents (OCR factures), agents IA pour workflows financiers, analytics predictif pour la tresorerie, et modeles LLM sur mesure pour le risque et la conformite.</p>
+            </details>
+            <details style="border-bottom: 1px solid var(--light-gray); padding: 20px 0;">
+                <summary style="font-family: var(--serif); font-size: 1.2rem; cursor: pointer; color: var(--text-primary);">Ou est situe GX2C ?</summary>
+                <p style="margin-top: 12px; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;">99 avenue Achille Peretti, 92200 Neuilly-sur-Seine, France. Contact : contact@ybcparis.com</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="section-inner">
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <div class="section-tag">Contact</div>
+                <h2 class="section-title" data-lang="fr">Construisons ensemble</h2>
+                <h2 class="section-title" data-lang="en">Let's build together</h2>
+                <p class="section-desc" data-lang="fr">Un projet, une ambition, une question ? Notre equipe est a votre disposition pour en discuter.</p>
+                <p class="section-desc" data-lang="en">A project, an ambition, a question? Our team is at your disposal to discuss it.</p>
+                <div class="contact-detail">
+                    <div class="contact-detail-label">Email</div>
+                    <div class="contact-detail-value"><a href="mailto:contact@ybcparis.com">contact@ybcparis.com</a></div>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-detail-label">
+                        <span data-lang-inline="fr">Adresse</span>
+                        <span data-lang-inline="en">Address</span>
+                    </div>
+                    <div class="contact-detail-value">99 avenue Achille Peretti<br>92200 Neuilly-sur-Seine, France</div>
+                </div>
+            </div>
+            <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mojnkrqw" method="POST">
+                <input type="hidden" name="_replyto" id="hiddenEmail">
+                <input type="hidden" name="_subject" value="Nouveau message GX2C">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name"><span data-lang-inline="fr">Nom</span><span data-lang-inline="en">Name</span></label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company"><span data-lang-inline="fr">Societe</span><span data-lang-inline="en">Company</span></label>
+                        <input type="text" id="company" name="company" placeholder="Acme Corp">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="john@acme.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="form-submit" id="submitBtn">
+                    <span data-lang-inline="fr">Envoyer</span>
+                    <span data-lang-inline="en">Send</span>
+                </button>
+                <div id="formStatus" class="form-status"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">GX2C</div>
+        <div class="footer-text">&copy; 2018-2026 GX2C — YB Consulting (EURL). All rights reserved.</div>
+    </div>
+</footer>
+
+<script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar?.classList.toggle('scrolled', window.scrollY > 40); });
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle?.addEventListener('click', () => { menuToggle.classList.toggle('active'); navLinks?.classList.toggle('open'); });
+    navLinks?.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { menuToggle?.classList.remove('active'); navLinks?.classList.remove('open'); }); });
+    const langToggle = document.getElementById('langToggle');
+    let currentLang = 'fr';
+    langToggle?.addEventListener('click', () => { currentLang = currentLang === 'fr' ? 'en' : 'fr'; document.documentElement.lang = currentLang; langToggle.textContent = currentLang === 'fr' ? 'EN' : 'FR'; });
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => { entries.forEach((entry, i) => { if (entry.isIntersecting) { setTimeout(() => entry.target.classList.add('visible'), i * 80); observer.unobserve(entry.target); } }); }, { threshold: 0.15 });
+    reveals.forEach(el => observer.observe(el));
+    const contactForm = document.getElementById('contactForm') as HTMLFormElement;
+    const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
+    const formStatus = document.getElementById('formStatus');
+    contactForm?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        submitBtn.disabled = true; submitBtn.style.opacity = '0.5';
+        if (formStatus) { formStatus.textContent = ''; formStatus.className = 'form-status'; }
+        const hiddenEmail = document.getElementById('hiddenEmail') as HTMLInputElement;
+        const emailInput = document.getElementById('email') as HTMLInputElement;
+        if (hiddenEmail && emailInput) hiddenEmail.value = emailInput.value;
+        try {
+            const res = await fetch(contactForm.action, { method: 'POST', body: new FormData(contactForm), headers: { 'Accept': 'application/json' } });
+            if (res.ok && formStatus) { formStatus.textContent = currentLang === 'fr' ? 'Message envoye avec succes.' : 'Message sent successfully.'; formStatus.className = 'form-status success'; contactForm.reset(); }
+            else throw new Error();
+        } catch { window.location.href = 'mailto:contact@ybcparis.com'; }
+        submitBtn.disabled = false; submitBtn.style.opacity = '1';
+    });
+</script>
+
+</Base>
