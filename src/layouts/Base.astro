@@ -59,8 +59,8 @@ const defaultJsonLd = [
   }
 ];
 
-const jsonLdOutput = jsonLd || defaultJsonLd;
-const jsonLdArray = Array.isArray(jsonLdOutput) ? jsonLdOutput : [jsonLdOutput];
+const extraJsonLd = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const jsonLdArray = [...defaultJsonLd, ...extraJsonLd];
 ---
 
 <!DOCTYPE html>
