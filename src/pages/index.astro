@@ -109,7 +109,7 @@ const faqJsonLd = {
     </div>
 </section>
 
-<!-- TWO PILLARS -->
+<!-- EXPERTISE -->
 <section class="pillars" id="expertise">
     <div class="section-inner">
         <div class="pillars-header reveal">
@@ -121,34 +121,36 @@ const faqJsonLd = {
             <h2 class="section-title" data-lang="en">Advisory &amp; AI:<br>two disciplines, one standard of excellence</h2>
         </div>
 
-        <div class="pillars-grid">
+        <div class="pillars-stack">
             <div class="pillar reveal">
-                <div class="pillar-number">01</div>
-                <h3 class="pillar-title" data-lang="fr">Advisory</h3>
-                <h3 class="pillar-title" data-lang="en">Advisory</h3>
-                <div class="pillar-line"></div>
-                <p class="pillar-desc" data-lang="fr">Nous accompagnons les institutions financières et les grands comptes dans leurs programmes de transformation les plus critiques — systèmes d'information, Finance de Marché, Trésorerie, conformité réglementaire. Du cadrage stratégique au delivery opérationnel.</p>
-                <p class="pillar-desc" data-lang="en">We support financial institutions and large corporates through their most critical transformation programs — information systems, Capital Markets, Treasury, regulatory compliance. From strategic scoping to operational delivery.</p>
-                <div class="pillar-tags">
-                    <span>Capital Markets</span>
-                    <span>Treasury</span>
-                    <span>Regulatory</span>
-                    <span>SI Transformation</span>
+                <div class="pillar-accent"></div>
+                <div class="pillar-content">
+                    <h3 class="pillar-title" data-lang="fr">Advisory</h3>
+                    <h3 class="pillar-title" data-lang="en">Advisory</h3>
+                    <p class="pillar-desc" data-lang="fr">Nous accompagnons les institutions financières et les grands comptes dans leurs programmes de transformation les plus critiques — systèmes d'information, Finance de Marché, Trésorerie, conformité réglementaire. Du cadrage stratégique au delivery opérationnel.</p>
+                    <p class="pillar-desc" data-lang="en">We support financial institutions and large corporates through their most critical transformation programs — information systems, Capital Markets, Treasury, regulatory compliance. From strategic scoping to operational delivery.</p>
+                    <div class="pillar-tags">
+                        <span>Capital Markets</span>
+                        <span>Treasury</span>
+                        <span>Regulatory</span>
+                        <span>SI Transformation</span>
+                    </div>
                 </div>
             </div>
 
             <div class="pillar reveal">
-                <div class="pillar-number">02</div>
-                <h3 class="pillar-title" data-lang="fr">AI Products</h3>
-                <h3 class="pillar-title" data-lang="en">AI Products</h3>
-                <div class="pillar-line"></div>
-                <p class="pillar-desc" data-lang="fr">Nous concevons et déployons des produits d'intelligence artificielle propriétaires qui augmentent la performance de nos clients — automatisation intelligente, analytics prédictif, agents IA. De l'idée au produit en production.</p>
-                <p class="pillar-desc" data-lang="en">We design and deploy proprietary artificial intelligence products that amplify our clients' performance — intelligent automation, predictive analytics, AI agents. From idea to product in production.</p>
-                <div class="pillar-tags">
-                    <span>AI Agents</span>
-                    <span>Machine Learning</span>
-                    <span>Data Engineering</span>
-                    <span>LLM</span>
+                <div class="pillar-accent"></div>
+                <div class="pillar-content">
+                    <h3 class="pillar-title" data-lang="fr">AI Products</h3>
+                    <h3 class="pillar-title" data-lang="en">AI Products</h3>
+                    <p class="pillar-desc" data-lang="fr">Nous concevons et déployons des produits d'intelligence artificielle propriétaires qui augmentent la performance de nos clients — automatisation intelligente, analytics prédictif, agents IA. De l'idée au produit en production.</p>
+                    <p class="pillar-desc" data-lang="en">We design and deploy proprietary artificial intelligence products that amplify our clients' performance — intelligent automation, predictive analytics, AI agents. From idea to product in production.</p>
+                    <div class="pillar-tags">
+                        <span>AI Agents</span>
+                        <span>Machine Learning</span>
+                        <span>Data Engineering</span>
+                        <span>LLM</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -496,55 +498,50 @@ const faqJsonLd = {
         margin-top: 16px;
     }
 
-    /* ===== PILLARS ===== */
+    /* ===== EXPERTISE / PILLARS ===== */
     .pillars {
         padding: 120px 60px;
         background: var(--white);
     }
     .pillars-header { margin-bottom: 64px; }
-    .pillars-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
+    .pillars-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
     }
     .pillar {
-        padding: 48px;
+        display: flex;
+        align-items: stretch;
         background: var(--off-white);
-        border: 1px solid var(--light-gray);
         transition: all 0.35s ease;
     }
     .pillar:hover {
-        border-color: var(--accent-gold);
-        transform: translateY(-4px);
+        transform: translateY(-3px);
         box-shadow: 0 12px 40px rgba(0,0,0,0.06);
     }
-    .pillar-number {
-        font-family: var(--serif);
-        font-size: 3rem;
-        font-weight: 300;
-        color: var(--accent-gold-light);
-        line-height: 1;
-        margin-bottom: 20px;
+    .pillar-accent {
+        width: 4px;
+        flex-shrink: 0;
+        background: var(--accent-gold);
+    }
+    .pillar-content {
+        padding: 48px 56px;
+        flex: 1;
     }
     .pillar-title {
         font-family: var(--serif);
-        font-size: 1.8rem;
+        font-size: 2rem;
         font-weight: 400;
         color: var(--text-primary);
-        margin-bottom: 16px;
-    }
-    .pillar-line {
-        width: 40px;
-        height: 1.5px;
-        background: var(--accent-gold);
         margin-bottom: 20px;
     }
     .pillar-desc {
-        font-size: 0.92rem;
+        font-size: 0.95rem;
         font-weight: 300;
-        line-height: 1.8;
+        line-height: 1.85;
         color: var(--text-secondary);
         margin-bottom: 28px;
+        max-width: 720px;
     }
     .pillar-tags {
         display: flex;
@@ -754,8 +751,7 @@ const faqJsonLd = {
     /* ===== RESPONSIVE ===== */
     @media (max-width: 1024px) {
         .hero h1 { font-size: 3rem; }
-        .pillars-grid { gap: 24px; }
-        .pillar { padding: 36px; }
+        .pillar-content { padding: 36px 40px; }
         .contact-grid { gap: 48px; }
     }
 
@@ -786,7 +782,7 @@ const faqJsonLd = {
         .hero-cta { padding: 14px 28px; font-size: 0.78rem; }
 
         .pillars { padding: 80px 24px; }
-        .pillars-grid { grid-template-columns: 1fr; }
+        .pillar-content { padding: 28px 24px; }
         .section-title { font-size: 2.2rem; }
 
         .trust { padding: 80px 24px; }
@@ -806,9 +802,8 @@ const faqJsonLd = {
     @media (max-width: 480px) {
         .hero h1 { font-size: 1.8rem; }
         .section-title { font-size: 1.8rem; }
-        .pillar { padding: 28px; }
-        .pillar-number { font-size: 2.4rem; }
-        .pillar-title { font-size: 1.4rem; }
+        .pillar-content { padding: 24px 20px; }
+        .pillar-title { font-size: 1.5rem; }
     }
 </style>
 
