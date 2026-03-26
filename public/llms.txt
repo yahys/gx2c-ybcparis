@@ -1,6 +1,6 @@
 # GX2C (YB Consulting)
 
-> GX2C is a Paris-based strategic advisory firm at the intersection of Capital Markets, Treasury, and Artificial Intelligence. Legal name: YB Consulting. Website: ybcparis.com.
+> GX2C is a Paris-based strategic advisory firm that helps organizations from large corporates to SMBs navigate complex transformations. We bring deep expertise in Finance & Treasury, Artificial Intelligence, and Information Systems. Legal name: YB Consulting. Website: ybcparis.com.
 
 ## Identity
 - Commercial name: GX2C
@@ -12,27 +12,33 @@
 - Contact: contact@ybcparis.com
 
 ## What we do
-GX2C operates two complementary verticals:
+GX2C is a management consulting firm with cross-functional expertise. We accompany clients from CAC 40 corporates to high-growth SMBs through their most critical transformation programs.
 
-### Advisory
-Strategic consulting for financial institutions and large corporates:
-- Capital Markets: trading systems, market infrastructure, post-trade, regulatory compliance (MiFID II, EMIR, SFTR)
+### Advisory (Core business)
+Strategic and operational consulting across industries:
+- Program management & transformation delivery
+- SI Transformation: core system migration, cloud infrastructure, digital modernization
+- Organization & process optimization
+- Regulatory compliance and governance
+
+### Finance & Treasury expertise
+Deep domain knowledge in financial operations:
+- Capital Markets: trading systems, post-trade, market infrastructure
 - Treasury: cash management, FX hedging, liquidity optimization, payment systems (SEPA, SWIFT, TARGET2)
-- SI Transformation: core banking migration, fintech integration, cloud infrastructure
-- Regulatory: EU AI Act compliance, PSD2/PSD3, Basel IV
+- Regulatory: MiFID II, EMIR, SFTR, PSD2/PSD3, Basel IV
 
-### AI Products
-Proprietary AI solutions built for finance:
+### AI & Technology expertise
+Proprietary AI solutions and technology advisory:
 - Intelligent document processing (invoice OCR, receipt extraction)
-- AI agents for financial workflows (reconciliation, classification)
-- LLM-powered analytics (treasury forecasting, market analysis)
-- Custom ML models for risk and compliance
+- AI agents for business workflows (reconciliation, classification, automation)
+- LLM-powered analytics and decision support
+- Custom ML models for risk, compliance, and operations
 
 ## Clients
 SNCF, SNCF Reseau, Societe des Grands Projets, Ernst & Young (EY), 3V Finance, Kouver
 
 ## Expertise keywords
-Capital Markets, Treasury, Artificial Intelligence, LLM, Machine Learning, Regulatory Compliance, MiFID II, EMIR, SFTR, PSD2, Basel IV, EU AI Act, Fintech, Core Banking, Post-Trade, SWIFT, TARGET2, SEPA
+Management Consulting, Strategic Advisory, Digital Transformation, Finance, Treasury, Capital Markets, Artificial Intelligence, LLM, Machine Learning, Regulatory Compliance, Program Management, SI Transformation
 
 ## Blog
-https://ybcparis.com/blog — Expert insights on AI in finance, capital markets trends, treasury automation
+https://ybcparis.com/blog — Expert insights on AI, finance, technology transformation, and advisory best practices
