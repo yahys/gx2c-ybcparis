@@ -11,17 +11,25 @@ category: "advisory"
 
 En 2026, 78 % des dirigeants de PME déclarent vouloir intégrer l'intelligence artificielle dans leur activité. Mais seuls 12 % ont franchi le pas. L'écart entre l'intention et l'action s'explique en trois mots : coût, complexité, compétences.
 
-C'est précisément pour combler ce fossé que Bpifrance a lancé le programme **Osez l'IA**. Un dispositif concret, financé, et conçu pour accompagner les PME et ETI françaises dans leurs premiers projets d'intelligence artificielle — sans prérequis technique.
+C'est précisément pour combler ce fossé que le gouvernement a lancé le plan **Osez l'IA**, doté de 200 millions d'euros. Un dispositif concret, piloté par la Direction Générale des Entreprises (DGE) et opéré par Bpifrance dans le cadre de France 2030, pour accompagner les PME et ETI françaises dans leurs premiers projets d'intelligence artificielle — sans prérequis technique.
 
-## Qu'est-ce que le programme Osez l'IA ?
+L'objectif affiché à horizon 2030 : 80 % des PME et ETI équipées en IA.
 
-Osez l'IA est un programme d'accompagnement opéré par Bpifrance dans le cadre du plan France 2030. Il s'adresse aux **PME et ETI** qui souhaitent explorer l'IA sans savoir par où commencer.
+## Qu'est-ce que le plan Osez l'IA ?
 
-Le programme se décompose en plusieurs phases :
+Osez l'IA regroupe plusieurs dispositifs complémentaires, de la sensibilisation au déploiement opérationnel. Il intègre notamment le programme IA Booster France 2030, doté de 25 millions d'euros.
 
-### 1. Sensibilisation et diagnostic
+Le parcours se décompose en quatre phases :
 
-Une première étape de cadrage permet d'identifier les cas d'usage pertinents pour l'entreprise. Pas de jargon, pas de slide deck de 200 pages — un diagnostic terrain, mené par des experts, pour répondre à une question simple : **où l'IA peut-elle créer de la valeur dans votre activité ?**
+### 1. Sensibilisation et formation
+
+Bpifrance met à disposition l'**Académie de l'IA**, une plateforme de formations en ligne gratuites. L'objectif : permettre aux dirigeants de comprendre ce que l'IA peut (et ne peut pas) faire pour leur entreprise, sans jargon technique.
+
+### 2. Diagnostic Data IA
+
+C'est le cœur du dispositif. Un expert agréé Bpifrance intervient pendant **8 jours sur 3 mois** pour analyser votre système d'information, cartographier vos données, étudier vos processus métier et identifier les cas d'usage IA prioritaires. Le livrable : une feuille de route IA concrète et chiffrée.
+
+**Coût :** 10 000 € HT. Prise en charge de 25 % par Bpifrance pour les PME → **reste à charge : 7 500 € HT.**
 
 Les cas d'usage les plus fréquents :
 - **Automatisation de tâches répétitives** : saisie de données, traitement de factures, classification de documents
@@ -29,22 +37,24 @@ Les cas d'usage les plus fréquents :
 - **Aide à la décision** : prévision de la demande, scoring de risques, détection d'anomalies
 - **Optimisation opérationnelle** : planification, maintenance prédictive, gestion des stocks
 
-### 2. Accompagnement par un prestataire référencé
+### 3. Sélection de solution et expérimentation
 
-Bpifrance met à disposition un réseau de prestataires qualifiés qui accompagnent l'entreprise dans la mise en œuvre concrète. L'objectif n'est pas de livrer une étude, mais un **premier projet IA fonctionnel**.
+Un accompagnement pour évaluer les solutions du marché, planifier le déploiement et lancer une première expérimentation IA en conditions réelles. Le programme IA Booster prend en charge **jusqu'à 80 % du coût des prestations** sur ces phases.
 
-### 3. Financement
+### 4. Financement du passage à l'échelle
 
-Le programme prend en charge une partie significative des coûts d'accompagnement. Les montants varient selon le dispositif exact et la taille de l'entreprise, mais l'aide peut couvrir **jusqu'à 50 % des frais de prestation**, avec des plafonds allant de 10 000 à 40 000 euros selon les appels à projets régionaux.
+Un **fonds de garantie bancaire** dédié permet d'obtenir des prêts garantis jusqu'à 500 000 € sur 10 ans pour financer le déploiement IA (enveloppe totale : 100 millions d'euros).
 
 ## Qui est éligible ?
 
 Les critères d'éligibilité sont volontairement larges :
 
-- **PME** (moins de 250 salariés, CA inférieur à 50 M€) ou **ETI** (250 à 4 999 salariés)
-- Siège social en France
-- Projet d'IA identifié ou en phase d'exploration
+- **PME** de 10 à 2 000 salariés, CA supérieur à 1 million d'euros
+- Entreprise indépendante, plus d'un an d'existence
+- Siège social en France (y compris DROM-COM)
 - Aucun prérequis technique : pas besoin d'avoir une équipe data ou un DSI
+
+> **À noter :** Depuis janvier 2026, les ETI ne sont plus éligibles au financement du Diag Data IA (elles restent éligibles aux autres volets du programme).
 
 Les secteurs sont tous concernés : industrie, services, commerce, santé, BTP, agroalimentaire, logistique. L'IA ne connaît pas de frontières sectorielles.
 
@@ -80,25 +90,25 @@ Visez un **quick win** en 4 à 8 semaines, puis itérez.
 
 Osez l'IA n'est pas le seul levier. Voici les dispositifs complémentaires que nous recommandons à nos clients :
 
-### Diagnostic IA Bpifrance
+### Pack IA Île-de-France
 
-Un diagnostic subventionné de 4 à 8 jours pour identifier les cas d'usage IA prioritaires dans votre entreprise. Financement jusqu'à 50 % par Bpifrance.
+Pour les PME et ETI franciliennes : **37 jours de prestation** par un expert IA, subventionnés à 50 % par la Région. Budget max 37 000 € HT, reste à charge max 18 500 €. Candidature au fil de l'eau.
 
-### IA Booster France 2030
+### OPCO — Formation IA financée
 
-Programme d'accélération pour les PME/ETI industrielles qui souhaitent déployer l'IA dans leurs processus de production. Accompagnement technique et financier sur 6 à 12 mois.
-
-### Chèques IA régionaux
-
-Plusieurs régions (Île-de-France, Auvergne-Rhône-Alpes, Nouvelle-Aquitaine, Occitanie) proposent des chèques numériques ou IA de 5 000 à 20 000 euros pour financer un premier projet.
+Vos salariés peuvent être formés à l'IA avec une prise en charge de **50 à 100 %** des coûts pédagogiques par votre OPCO (ATLAS, OPCO2i, AKTO…). Jusqu'à 3 500 € par salarié et par an. Entreprises de moins de 50 salariés : prise en charge jusqu'à 100 %.
 
 ### Crédit d'Impôt Recherche (CIR)
 
-Les dépenses de R&D liées à l'IA sont éligibles au CIR, qui permet de récupérer **30 % des dépenses** sous forme de crédit d'impôt. Cela inclut les salaires des ingénieurs, les coûts de sous-traitance et les frais de propriété intellectuelle.
+Les dépenses de R&D liées à l'IA sont éligibles au CIR : **30 % des dépenses** sous forme de crédit d'impôt. Salaires des ingénieurs, coûts de sous-traitance, amortissement du matériel. **Nouveauté 2026 :** les investissements en capacités de calcul (GPU, infrastructure) sont directement éligibles.
 
 ### Crédit d'Impôt Innovation (CII)
 
-Complémentaire au CIR, le CII s'adresse aux PME qui développent des produits innovants. Le taux est de 20 % des dépenses, plafonné à 80 000 euros par an.
+Complémentaire au CIR, le CII s'adresse aux PME qui développent des produits innovants. Taux de **20 % des dépenses**, plafonné à 80 000 euros par an. Reconduit jusqu'en 2027.
+
+### Appel à projets « Pionniers de l'IA » (France 2030)
+
+Pour les projets R&D de rupture. Trois phases : faisabilité (100-200 k€, subvention 100 %), démonstrateur (400-800 k€), industrialisation (3-8 M€). **Prochaine date de dépôt : 9 juin 2026.**
 
 ## Comment GX2C vous accompagne
 

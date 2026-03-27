@@ -25,23 +25,23 @@ Le problème n'est pas le manque de financements. C'est le manque de lisibilité
 
 **Comment candidater ?** Via la plateforme Bpifrance. Les appels à candidatures sont publiés régulièrement sur [bpifrance.fr](https://www.bpifrance.fr).
 
-### Diagnostic IA (Bpifrance)
+### Diag Data IA (Bpifrance)
 
-**Pour qui ?** PME et ETI qui veulent évaluer leur potentiel IA avant de se lancer.
+**Pour qui ?** PME de 10 à 2 000 salariés, CA supérieur à 1 M€, plus d'un an d'existence. Depuis 2026, les ETI ne sont plus éligibles au financement.
 
-**Quoi ?** Un diagnostic de 4 à 8 jours mené par un consultant spécialisé. L'objectif : cartographier les processus, identifier les données exploitables et proposer une feuille de route IA priorisée.
+**Quoi ?** 8 jours d'intervention d'un expert agréé Bpifrance sur 3 mois maximum. Analyse du SI, cartographie des données, étude des processus métier, identification des cas d'usage prioritaires. Livrable : une feuille de route IA chiffrée et priorisée.
 
-**Combien ?** Coût total de 6 000 à 15 000 euros, dont 50 % pris en charge par Bpifrance. Reste à charge pour l'entreprise : 3 000 à 7 500 euros.
+**Combien ?** Coût fixe de 10 000 € HT. Prise en charge de **25 % par Bpifrance** pour les PME → reste à charge : 7 500 € HT.
 
-**Notre avis :** C'est souvent le meilleur point d'entrée. Le diagnostic permet de valider la pertinence d'un projet IA avant d'engager des budgets plus importants.
+**Notre avis :** C'est le meilleur point d'entrée. Pour 7 500 euros, vous obtenez une feuille de route crédible qui sert de socle aux candidatures suivantes (IA Booster, aides régionales, CIR). Le retour sur investissement est quasi immédiat.
 
-### IA Booster (France 2030)
+### IA Booster France 2030 (intégré dans Osez l'IA)
 
-**Pour qui ?** PME et ETI industrielles qui souhaitent intégrer l'IA dans leurs processus de production.
+**Pour qui ?** PME et ETI de 10 à 2 000 salariés, CA supérieur à 250 000 €.
 
-**Quoi ?** Un programme d'accélération sur 6 à 12 mois, avec un accompagnement technique et financier. Le programme cible spécifiquement les usages industriels : maintenance prédictive, contrôle qualité, optimisation des flux.
+**Quoi ?** Programme en 4 phases : sensibilisation (gratuit), diagnostic, sélection de solution et expérimentation. L'accompagnement va de l'identification des cas d'usage jusqu'au déploiement opérationnel.
 
-**Combien ?** Subvention pouvant atteindre 50 % des coûts éligibles, avec des projets financés de 50 000 à 200 000 euros.
+**Combien ?** Prise en charge **jusqu'à 80 % du coût des prestations** sur les phases de diagnostic à expérimentation. Budget total du programme : 25 millions d'euros.
 
 ### Crédit d'Impôt Recherche (CIR)
 
@@ -57,11 +57,13 @@ Le problème n'est pas le manque de financements. C'est le manque de lisibilité
 
 **Attention :** Le CIR est un mécanisme puissant mais exigeant sur la documentation. Le dossier technique doit démontrer un état de l'art et une démarche expérimentale. Un accompagnement spécialisé est fortement recommandé pour éviter les redressements.
 
+**Nouveauté 2026 :** les investissements en capacités de calcul (GPU, infrastructure IA) sont désormais directement éligibles. En revanche, les frais de brevets et de veille technologique sont exclus de l'assiette depuis février 2025. Le PLF 2026 conditionne également le CIR au maintien de l'emploi en France.
+
 ### Crédit d'Impôt Innovation (CII)
 
 **Pour qui ?** PME uniquement (au sens communautaire : moins de 250 salariés, CA < 50 M€).
 
-**Quoi ?** Un crédit d'impôt de **20 % sur les dépenses d'innovation**, plafonné à 80 000 euros par an. Le CII est complémentaire au CIR et couvre les dépenses liées à la conception de prototypes et d'installations pilotes.
+**Quoi ?** Un crédit d'impôt de **20 % sur les dépenses d'innovation**, plafonné à 80 000 euros par an. Reconduit jusqu'en 2027. Le CII couvre la conception de prototypes et d'installations pilotes.
 
 **Pour l'IA :** Le développement d'un agent IA sur mesure, d'un modèle de machine learning adapté à un secteur spécifique ou d'un produit intégrant de l'IA peut être éligible au CII.
 
@@ -71,8 +73,8 @@ Plusieurs régions proposent des dispositifs spécifiques pour accélérer l'ado
 
 ### Île-de-France
 
-- **Chèque numérique** : jusqu'à 10 000 euros pour les TPE/PME franciliennes qui souhaitent digitaliser leurs processus (IA incluse)
-- **PM'up IA** : aide de 20 000 à 250 000 euros pour les PME innovantes en croissance
+- **Pack IA** : 37 jours de prestation par un expert IA, subventionnés à **50 % par la Région**. Budget max 37 000 € HT, reste à charge max 18 500 €. Candidature au fil de l'eau.
+- **Innov'up** : subventions jusqu'à 500 000 € pour les PME innovantes (en partenariat avec Bpifrance)
 
 ### Auvergne-Rhône-Alpes
 
@@ -86,6 +88,10 @@ Plusieurs régions proposent des dispositifs spécifiques pour accélérer l'ado
 
 - **Chèque transformation numérique** : jusqu'à 10 000 euros pour les PME/ETI
 
+### Financement formation (OPCO)
+
+Ne négligez pas les **OPCO** (ATLAS, OPCO2i, AKTO…). Ils financent de 50 à 100 % des formations IA pour vos salariés — jusqu'à 3 500 € par personne et par an. Les entreprises de moins de 50 salariés bénéficient d'une prise en charge intégrale. Cumulable avec le FSE+ (Fonds Social Européen) qui cofinance jusqu'à 50 % supplémentaires.
+
 > **Conseil :** Les aides régionales sont cumulables avec les dispositifs nationaux et le CIR. C'est là que le montage financier devient intéressant.
 
 ## Comment optimiser le montage financier
@@ -94,13 +100,13 @@ Prenons l'exemple d'un projet IA type pour une PME de 80 salariés :
 
 | Poste | Coût | Aide | Reste à charge |
 |-------|------|------|----------------|
-| Diagnostic IA (Bpifrance) | 8 000 € | 4 000 € (50 %) | 4 000 € |
-| Développement IA (prestataire) | 35 000 € | 17 500 € (Osez l'IA, 50 %) | 17 500 € |
+| Diag Data IA (Bpifrance) | 10 000 € | 2 500 € (25 %) | 7 500 € |
+| Déploiement IA (prestataire, IA Booster) | 30 000 € | 24 000 € (80 %) | 6 000 € |
 | Ingénierie interne (6 mois, 0.5 ETP) | 25 000 € | 7 500 € (CIR, 30 %) | 17 500 € |
-| Aide régionale (chèque numérique) | — | 10 000 € | -10 000 € |
-| **Total** | **68 000 €** | **39 000 €** | **29 000 €** |
+| Formation équipe (OPCO) | 5 000 € | 5 000 € (100 %) | 0 € |
+| **Total** | **70 000 €** | **39 000 €** | **31 000 €** |
 
-**Résultat : 57 % du projet financé par des aides publiques.** Le reste à charge de 29 000 euros correspond à un investissement de 362 euros par salarié — soit moins qu'une licence logicielle annuelle.
+**Résultat : 56 % du projet financé par des aides publiques.** Le reste à charge de 31 000 euros correspond à un investissement de 388 euros par salarié — soit moins qu'une licence logicielle annuelle. Et si vous êtes en Île-de-France, le Pack IA régional peut couvrir jusqu'à 18 500 € supplémentaires.
 
 ## Les pièges à éviter
 
