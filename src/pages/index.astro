@@ -167,8 +167,8 @@ const faqJsonLd = {
             </div>
             <h2 class="section-title" data-lang="fr">Des solutions déployées,<br>des résultats mesurés</h2>
             <h2 class="section-title" data-lang="en">Deployed solutions,<br>measured results</h2>
-            <p class="section-desc" data-lang="fr">Chaque projet part d'un problème métier concret. Voici les solutions que nous avons conçues et mises en production.</p>
-            <p class="section-desc" data-lang="en">Every project starts from a concrete business problem. Here are the solutions we've designed and put into production.</p>
+            <p class="section-desc" data-lang="fr">Chaque projet part d'un problème métier concret. Voici quelques-unes des solutions que nous avons conçues et mises en production.</p>
+            <p class="section-desc" data-lang="en">Every project starts from a concrete business problem. Here are some of the solutions we've designed and put into production.</p>
         </div>
         <div class="real-grid reveal">
             <div class="real-card">
@@ -227,6 +227,13 @@ const faqJsonLd = {
                 <p class="real-desc" data-lang="fr">Des assistants spécialisés qui répondent aux questions récurrentes de vos clients ou de vos équipes — support, RH, juridique, technique.</p>
                 <p class="real-desc" data-lang="en">Specialized assistants answering recurring questions from customers or teams — support, HR, legal, technical.</p>
             </div>
+            <a href="#contact" class="real-card real-card-cta">
+                <div class="real-icon">→</div>
+                <h3 class="real-title" data-lang="fr">Et bien d'autres…</h3>
+                <h3 class="real-title" data-lang="en">And many more…</h3>
+                <p class="real-desc" data-lang="fr">Chaque entreprise a ses propres enjeux. Parlons des vôtres.</p>
+                <p class="real-desc" data-lang="en">Every business has its own challenges. Let's talk about yours.</p>
+            </a>
         </div>
     </div>
 </section>
@@ -675,6 +682,21 @@ const faqJsonLd = {
         font-weight: 300;
         line-height: 1.7;
         color: rgba(255,255,255,0.5);
+    }
+    .real-card-cta {
+        text-decoration: none;
+        border: 1px solid rgba(255,255,255,0.1);
+        transition: border-color 0.3s ease, background 0.3s ease;
+    }
+    .real-card-cta:hover {
+        border-color: var(--accent-gold);
+        background: rgba(255,255,255,0.06);
+    }
+    .real-card-cta .real-icon {
+        color: var(--accent-gold);
+        font-family: var(--sans);
+        font-weight: 300;
+        font-size: 1.4rem;
     }
 
     /* ===== TRUST / CLIENTS ===== */
