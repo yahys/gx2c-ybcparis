@@ -108,6 +108,17 @@ const jsonLdArray = [...defaultJsonLd, ...extraJsonLd];
         })(window, document, "clarity", "script", "vsko2dp4v2");
     </script>
 
+    <!-- Consent Mode — default denied, updated on accept -->
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        if (localStorage.getItem('gx2c_consent') === 'granted') {
+            gtag('consent', 'default', { analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+        } else {
+            gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+        }
+    </script>
+
     <!-- Google Tag Manager -->
     <script type="text/javascript">
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -189,5 +200,38 @@ const jsonLdArray = [...defaultJsonLd, ...extraJsonLd];
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <slot />
+
+    <!-- Cookie Consent Banner -->
+    <div id="consent-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1A1917;border-top:1px solid #9A8C6C33;padding:16px 24px;font-family:var(--sans);font-size:13px;color:#B8B5AD;">
+        <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+            <p style="margin:0;flex:1;min-width:200px;line-height:1.5;">
+                Ce site utilise des cookies analytiques pour mesurer l'audience.
+                <a href="/mentions-legales" style="color:#9A8C6C;text-decoration:underline;">En savoir plus</a>
+            </p>
+            <div style="display:flex;gap:8px;flex-shrink:0;">
+                <button id="consent-reject" style="padding:8px 16px;border:1px solid #6B6860;background:transparent;color:#B8B5AD;border-radius:6px;cursor:pointer;font-family:var(--sans);font-size:12px;letter-spacing:0.02em;">Refuser</button>
+                <button id="consent-accept" style="padding:8px 16px;border:1px solid #9A8C6C;background:#9A8C6C;color:#1A1917;border-radius:6px;cursor:pointer;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:0.02em;">Accepter</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        (function() {
+            var choice = localStorage.getItem('gx2c_consent');
+            if (choice) return;
+            var banner = document.getElementById('consent-banner');
+            if (banner) banner.style.display = 'block';
+
+            document.getElementById('consent-accept')?.addEventListener('click', function() {
+                localStorage.setItem('gx2c_consent', 'granted');
+                gtag('consent', 'update', { analytics_storage: 'granted' });
+                banner.style.display = 'none';
+            });
+
+            document.getElementById('consent-reject')?.addEventListener('click', function() {
+                localStorage.setItem('gx2c_consent', 'denied');
+                banner.style.display = 'none';
+            });
+        })();
+    </script>
 </body>
 </html>
