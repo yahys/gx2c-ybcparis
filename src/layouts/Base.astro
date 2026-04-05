@@ -108,17 +108,14 @@ const jsonLdArray = [...defaultJsonLd, ...extraJsonLd];
         })(window, document, "clarity", "script", "vsko2dp4v2");
     </script>
 
-    <!-- GA4 direct (no GTM) -->
+    <!-- GA4 direct -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J21ETEPFPL"></script>
     <script type="text/javascript">
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        var _c = localStorage.getItem('gx2c_consent');
-        if (_c !== 'denied') {
-            gtag('js', new Date());
-            gtag('config', 'G-J21ETEPFPL', { send_page_view: true });
-        }
+        gtag('js', new Date());
+        gtag('config', 'G-J21ETEPFPL');
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J21ETEPFPL"></script>
 
     <!-- Google Fonts — preload to avoid render-blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -211,13 +208,12 @@ const jsonLdArray = [...defaultJsonLd, ...extraJsonLd];
 
             document.getElementById('consent-accept')?.addEventListener('click', function() {
                 localStorage.setItem('gx2c_consent', 'granted');
-                gtag('js', new Date());
-                gtag('config', 'G-J21ETEPFPL', { send_page_view: true });
                 banner.style.display = 'none';
             });
 
             document.getElementById('consent-reject')?.addEventListener('click', function() {
                 localStorage.setItem('gx2c_consent', 'denied');
+                window['ga-disable-G-J21ETEPFPL'] = true;
                 banner.style.display = 'none';
             });
         })();
