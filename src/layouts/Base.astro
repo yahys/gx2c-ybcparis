@@ -108,15 +108,15 @@ const jsonLdArray = [...defaultJsonLd, ...extraJsonLd];
         })(window, document, "clarity", "script", "vsko2dp4v2");
     </script>
 
-    <!-- Consent Mode — default denied, updated on accept -->
+    <!-- Consent Mode — granted by default, revoked on reject -->
     <script type="text/javascript">
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        if (localStorage.getItem('gx2c_consent') === 'granted') {
-            gtag('consent', 'default', { analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
-        } else {
-            gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
-        }
+        var _c = localStorage.getItem('gx2c_consent');
+        gtag('consent', 'default', {
+            analytics_storage: _c === 'denied' ? 'denied' : 'granted',
+            ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'
+        });
     </script>
 
     <!-- Google Tag Manager -->
@@ -229,6 +229,7 @@ const jsonLdArray = [...defaultJsonLd, ...extraJsonLd];
 
             document.getElementById('consent-reject')?.addEventListener('click', function() {
                 localStorage.setItem('gx2c_consent', 'denied');
+                gtag('consent', 'update', { analytics_storage: 'denied' });
                 banner.style.display = 'none';
             });
         })();
