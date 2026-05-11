@@ -343,6 +343,11 @@ const faqJsonLd = {
             <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mojnkrqw" method="POST">
                 <input type="hidden" name="_replyto" id="hiddenEmail">
                 <input type="hidden" name="_subject" value="Nouveau message GX2C">
+                <input type="hidden" name="utm_source" id="utmSource">
+                <input type="hidden" name="utm_medium" id="utmMedium">
+                <input type="hidden" name="utm_campaign" id="utmCampaign">
+                <input type="hidden" name="utm_content" id="utmContent">
+                <input type="hidden" name="referrer" id="formReferrer">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name"><span data-lang-inline="fr">Nom</span><span data-lang-inline="en">Name</span></label>
@@ -969,6 +974,21 @@ const faqJsonLd = {
     const contactForm = document.getElementById('contactForm') as HTMLFormElement;
     const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
     const formStatus = document.getElementById('formStatus');
+
+    // Capture UTM params (from blog/LinkedIn/etc) into hidden form fields
+    // Persist across page navigation via sessionStorage so the contact section keeps the attribution
+    const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+    const params = new URLSearchParams(window.location.search);
+    utmKeys.forEach(k => {
+        const v = params.get(k);
+        if (v) sessionStorage.setItem(k, v);
+        const stored = sessionStorage.getItem(k) || '';
+        const el = document.getElementById(k === 'utm_source' ? 'utmSource' : k === 'utm_medium' ? 'utmMedium' : k === 'utm_campaign' ? 'utmCampaign' : 'utmContent') as HTMLInputElement | null;
+        if (el) el.value = stored;
+    });
+    const refEl = document.getElementById('formReferrer') as HTMLInputElement | null;
+    if (refEl) refEl.value = document.referrer || '';
+
     contactForm?.addEventListener('submit', async (e) => {
         e.preventDefault();
         submitBtn.disabled = true; submitBtn.style.opacity = '0.5';

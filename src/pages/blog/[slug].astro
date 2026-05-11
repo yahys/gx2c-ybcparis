@@ -13,6 +13,10 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 
+const utm = `utm_source=blog&utm_medium=organic&utm_campaign=${encodeURIComponent(post.id)}`;
+const contactNav = `/?${utm}&utm_content=nav#contact`;
+const contactCta = `/?${utm}&utm_content=article-end#contact`;
+
 function formatDate(dateStr: string): string {
   return new Date(dateStr).toLocaleDateString('fr-FR', {
     year: 'numeric',
@@ -63,7 +67,7 @@ const articleJsonLd = {
             <li><a href="/#expertise">Nos métiers</a></li>
             <li><a href="/#clients">Clients</a></li>
             <li><a href="/blog" class="active">Blog</a></li>
-            <li><a href="/#contact">Contact</a></li>
+            <li><a href={contactNav}>Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -98,7 +102,7 @@ const articleJsonLd = {
             <div class="cta-card">
                 <h2>Discutons de votre projet</h2>
                 <p>Vous souhaitez explorer comment l'IA et nos expertises peuvent accélérer votre transformation ? Contactez-nous.</p>
-                <a href="/#contact" class="cta-btn">
+                <a href={contactCta} class="cta-btn">
                     Prendre contact
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
