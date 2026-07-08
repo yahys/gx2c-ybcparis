@@ -1,3 +1,4 @@
+---
 title: "Agents IA : Le Paradoxe du 'Développeur Paresseux' — Votre Efficacité Est-Elle en Danger ?"
 description: "Un nouveau courant bouscule la conception des agents IA. Et si la 'paresse' était la clé d'une efficacité redoutable ? Les implications pour votre stratégie."
 publishedDate: "2026-06-14"

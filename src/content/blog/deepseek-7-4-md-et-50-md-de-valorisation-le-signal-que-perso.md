@@ -4,7 +4,7 @@ description: "La levée record de DeepSeek redessine le paysage de l'IA. Au-del�
 publishedDate: "2026-06-23"
 author: "GX2C"
 tags: ["IA", "Investissement IA", "Valorisation IA", "DeepSeek", "Strategie IA"]
-category: "strategy"
+category: "advisory"
 ---
 
 > **En bref** : DeepSeek, le géant chinois de l'IA, vient de lever plus de 7,4 milliards de dollars, propulsant sa valorisation à plus de 50 milliards de dollars. Est-ce une simple opération financière ou le marqueur d'une mutation profonde dans la course mondiale à l'IA, avec des implications directes pour votre stratégie ?

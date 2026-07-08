@@ -1,6 +1,6 @@
 ---
 title: "Agents IA : Votre 'Senior Dev Paresseux' Est-il la Clé de Votre ROI ?"
-description: "Un nouveau projet open-source bouscule les codes de l'IA agentique. Et si la "paresse" de vos agents était le secret de leur succès en production ?"
+description: "Un nouveau projet open-source bouscule les codes de l'IA agentique. Et si la « paresse » de vos agents était le secret de leur succès en production ?"
 publishedDate: "2026-06-15"
 author: "GX2C"
 tags: ["IA Agentique", "Optimisation Coûts", "Déploiement IA", "Productivité", "Open Source"]

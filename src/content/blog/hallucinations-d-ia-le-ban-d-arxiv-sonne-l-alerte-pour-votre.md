@@ -4,7 +4,7 @@ description: "Le récent ban d'arXiv sur les contenus IA erronés met en lumièr
 publishedDate: "2026-05-15"
 author: "GX2C"
 tags: ["IA", "LLM", "Fiabilité IA", "Gouvernance IA", "Risques IA"]
-category: "strategy"
+category: "advisory"
 ---
 
 > **En bref** : Le récent bannissement par arXiv de publications scientifiques générées par des LLM et contenant des erreurs flagrantes met en lumière un enjeu critique : la fiabilité de l'IA en entreprise. Au-delà du monde académique, cette décision soulève une question fondamentale pour chaque dirigeant : comment garantir l'intégrité des contenus produits par nos systèmes d'IA ?

@@ -1,5 +1,5 @@
 ---
-title: "Gemini 3.5 Flash : L'IA qui "clique". Votre entreprise est-elle prête ?"
+title: "Gemini 3.5 Flash : L'IA qui « clique ». Votre entreprise est-elle prête ?"
 description: "Google dote Gemini 3.5 Flash de la capacité d'utiliser un ordinateur. Une avancée majeure pour l'IA autonome, mais aussi un vertige stratégique pour les dirigeants."
 publishedDate: "2026-07-07"
 author: "GX2C"

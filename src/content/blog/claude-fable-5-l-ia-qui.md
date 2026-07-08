@@ -1,5 +1,5 @@
 ---
-title: "Claude Fable 5 : L'IA qui "construit des mondes", et vos pièges cachés"
+title: "Claude Fable 5 : L'IA qui « construit des mondes », et vos pièges cachés"
 description: "Anthropic lance Fable 5, une IA multimodale bluffante aux capacités inédites. Mais derrière le buzz, votre entreprise est-elle prête pour cette nouvelle ère d'autonomie ?"
 publishedDate: "2026-06-10"
 author: "GX2C"

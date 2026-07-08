@@ -1,5 +1,5 @@
 ---
-title: "IA : quand la machine "pense" et résout l'irrémédiable"
+title: "IA : quand la machine « pense » et résout l'irrémédiable"
 description: "OpenAI vient de dissiper une conjecture vieille de 80 ans. Votre stratégie R&D est-elle prête pour l'ère de l'IA auto-raisonnante ?"
 publishedDate: "2026-05-21"
 author: "GX2C"

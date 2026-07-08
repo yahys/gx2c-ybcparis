@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 110" role="img" aria-label="GX2C">
+  <title>GX2C — Conseil &amp; IA</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&amp;display=swap');
+      .wm { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 64px; letter-spacing: 6px; fill: #1A1917; }
+      @media (prefers-color-scheme: dark) {
+        .frame { stroke: #F5F3EF; }
+        .pillar { stroke: #F5F3EF; }
+        .wm { fill: #F5F3EF; }
+      }
+    </style>
+  </defs>
+
+  <!-- ── PICTOGRAMME (carré 95×95 à gauche) ───────────────────────── -->
+  <!-- Cadre fin : la « framework » du consultant -->
+  <rect class="frame" x="8" y="8" width="94" height="94" fill="none" stroke="#1A1917" stroke-width="1.5"/>
+
+  <!-- Pilier CONSEIL : diagonale anthracite, pleine, épaisse (la fondation) -->
+  <line class="pillar" x1="22" y1="22" x2="88" y2="88" stroke="#1A1917" stroke-width="9" stroke-linecap="square"/>
+
+  <!-- Pilier IA : diagonale or, plus fine, avec 3 nodes (réseau / data) -->
+  <line x1="22" y1="88" x2="88" y2="22" stroke="#9A8C6C" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="32" cy="78" r="4.5" fill="#9A8C6C"/>
+  <circle cx="55" cy="55" r="5"   fill="#9A8C6C"/>
+  <circle cx="78" cy="32" r="4.5" fill="#9A8C6C"/>
+
+  <!-- Point or central : l'intersection des deux métiers -->
+  <circle cx="55" cy="55" r="2.2" fill="#1A1917"/>
+
+  <!-- ── WORDMARK (« GX2C » à droite, Cormorant) ──────────────────── -->
+  <text x="125" y="76" class="wm">GX2C</text>
+</svg>

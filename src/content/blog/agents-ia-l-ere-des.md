@@ -1,5 +1,5 @@
 ---
-title: "Agents IA : L'Ère des "Humains Numériques" et le Piège du Chaos Open Source"
+title: "Agents IA : L'Ère des « Humains Numériques » et le Piège du Chaos Open Source"
 description: "La prolifération d'agents IA autonomes et open source promet des révolutions. Mais votre stratégie est-elle prête pour cette fragmentation ?"
 publishedDate: "2026-07-02"
 author: "GX2C"
