@@ -120,24 +120,40 @@ const jsonLdArray = [...defaultJsonLd, ...extraJsonLd];
     <!-- Google Fonts — preload to avoid render-blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Manrope:wght@200;300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Manrope:wght@200;300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Manrope:wght@200;300;400;500;600;700&display=swap"></noscript>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"></noscript>
 
     <style is:global>
         :root {
+            /* ===== Trust Tech design system (navy + electric accent) ===== */
+            --bg: #F8FAFC;
+            --surface: #FFFFFF;
+            --surface-2: #F1F5F9;
+            --navy: #0F172A;
+            --navy-2: #1E293B;
+            --text: #0F172A;
+            --text-2: #475569;
+            --muted: #94A3B8;
+            --border: #E2E8F0;
+            --accent: #2563EB;
+            --accent-2: #1E3A8A;
+            --accent-soft: #EFF6FF;
+            --ring: rgba(37,99,235,0.35);
+            --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+            /* legacy aliases → mapped onto the new palette so untouched refs stay coherent */
             --white: #FFFFFF;
-            --off-white: #FAFAF8;
-            --cream: #F5F3EF;
-            --light-gray: #E8E6E1;
-            --mid-gray: #B8B5AD;
-            --text-secondary: #6B6860;
-            --text-primary: #1A1917;
-            --accent: #0F0F0E;
-            --accent-gold: #9A8C6C;
-            --accent-gold-light: #C4B79A;
-            --serif: 'Cormorant Garamond', Georgia, serif;
-            --sans: 'Manrope', -apple-system, sans-serif;
+            --off-white: #F8FAFC;
+            --cream: #F1F5F9;
+            --light-gray: #E2E8F0;
+            --mid-gray: #94A3B8;
+            --text-secondary: #475569;
+            --text-primary: #0F172A;
+            --accent-gold: #2563EB;
+            --accent-gold-light: #60A5FA;
+            --serif: 'Inter', -apple-system, sans-serif;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -187,15 +203,15 @@ const jsonLdArray = [...defaultJsonLd, ...extraJsonLd];
     <slot />
 
     <!-- Cookie Consent Banner -->
-    <div id="consent-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1A1917;border-top:1px solid #9A8C6C33;padding:16px 24px;font-family:var(--sans);font-size:13px;color:#B8B5AD;">
+    <div id="consent-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0F172A;border-top:1px solid #2563EB33;padding:16px 24px;font-family:var(--sans);font-size:13px;color:#94A3B8;">
         <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
             <p style="margin:0;flex:1;min-width:200px;line-height:1.5;">
                 Ce site utilise des cookies analytiques pour mesurer l'audience.
-                <a href="/mentions-legales" style="color:#9A8C6C;text-decoration:underline;">En savoir plus</a>
+                <a href="/mentions-legales" style="color:#60A5FA;text-decoration:underline;">En savoir plus</a>
             </p>
             <div style="display:flex;gap:8px;flex-shrink:0;">
-                <button id="consent-reject" style="padding:8px 16px;border:1px solid #6B6860;background:transparent;color:#B8B5AD;border-radius:6px;cursor:pointer;font-family:var(--sans);font-size:12px;letter-spacing:0.02em;">Refuser</button>
-                <button id="consent-accept" style="padding:8px 16px;border:1px solid #9A8C6C;background:#9A8C6C;color:#1A1917;border-radius:6px;cursor:pointer;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:0.02em;">Accepter</button>
+                <button id="consent-reject" style="padding:8px 16px;border:1px solid #475569;background:transparent;color:#94A3B8;border-radius:6px;cursor:pointer;font-family:var(--sans);font-size:12px;letter-spacing:0.02em;">Refuser</button>
+                <button id="consent-accept" style="padding:8px 16px;border:1px solid #2563EB;background:#2563EB;color:#FFFFFF;border-radius:6px;cursor:pointer;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:0.02em;">Accepter</button>
             </div>
         </div>
     </div>

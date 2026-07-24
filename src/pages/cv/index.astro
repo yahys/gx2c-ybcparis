@@ -1,0 +1,607 @@
+---
+// Standalone CV page - no Base layout. Content identical to yahys.github.io/CV, SOTA form only.
+---
+
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yahya Benabdelkrim — CV | GX2C</title>
+    <meta name="description" content="CV de Yahya Benabdelkrim — Consultant en Stratégie & Transformation SI. Finance de marché, Trésorerie, PMO, Intelligence Artificielle.">
+
+    <meta property="og:title" content="Yahya Benabdelkrim — CV">
+    <meta property="og:description" content="Stratégie & Transformation SI · Finance de marché · Trésorerie · PMO · Intelligence Artificielle">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://ybcparis.com/cv">
+    <meta name="theme-color" content="#0F172A">
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"></noscript>
+
+    <style is:inline>
+        :root {
+            --bg: #F8FAFC;
+            --surface: #FFFFFF;
+            --surface-2: #F1F5F9;
+            --navy: #0F172A;
+            --navy-2: #1E293B;
+            --text: #0F172A;
+            --text-2: #475569;
+            --muted: #94A3B8;
+            --border: #E2E8F0;
+            --accent: #2563EB;
+            --accent-2: #1E3A8A;
+            --accent-soft: #EFF6FF;
+            --ring: rgba(37,99,235,0.35);
+            --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+            --radius: 16px;
+            --shadow: 0 1px 2px rgba(15,23,42,0.04), 0 12px 32px -12px rgba(15,23,42,0.12);
+        }
+
+        html[data-theme="dark"] {
+            --bg: #020617;
+            --surface: #0F172A;
+            --surface-2: #1E293B;
+            --navy: #020617;
+            --navy-2: #0F172A;
+            --text: #F1F5F9;
+            --text-2: #94A3B8;
+            --muted: #64748B;
+            --border: #1E293B;
+            --accent: #3B82F6;
+            --accent-2: #60A5FA;
+            --accent-soft: rgba(59,130,246,0.12);
+            --ring: rgba(59,130,246,0.4);
+            --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 16px 40px -16px rgba(0,0,0,0.6);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--sans);
+            color: var(--text);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transition: background 0.4s ease, color 0.4s ease;
+            line-height: 1.6;
+        }
+
+        .wrap { max-width: 940px; margin: 0 auto; padding: 0 24px; }
+
+        /* ===== NAV ===== */
+        .nav {
+            position: sticky; top: 0; z-index: 50;
+            background: color-mix(in srgb, var(--bg) 82%, transparent);
+            backdrop-filter: saturate(180%) blur(12px);
+            -webkit-backdrop-filter: saturate(180%) blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 940px; margin: 0 auto; padding: 14px 24px;
+            display: flex; align-items: center; justify-content: space-between; gap: 16px;
+        }
+        .nav-brand { display: flex; align-items: baseline; gap: 10px; }
+        .nav-logo {
+            font-family: var(--mono); font-weight: 600; font-size: 1.05rem;
+            letter-spacing: 0.06em; color: var(--text);
+        }
+        .nav-tag {
+            font-family: var(--mono); font-size: 0.7rem; font-weight: 500;
+            letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent);
+        }
+        .nav-actions { display: flex; align-items: center; gap: 8px; }
+        .icon-btn {
+            width: 40px; height: 40px; border-radius: 10px;
+            border: 1px solid var(--border); background: var(--surface);
+            display: inline-flex; align-items: center; justify-content: center;
+            cursor: pointer; color: var(--text-2); transition: all 0.25s ease;
+        }
+        .icon-btn:hover { color: var(--accent); border-color: var(--ring); transform: translateY(-1px); }
+        .icon-btn svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            height: 40px; padding: 0 16px; border-radius: 10px;
+            font-family: var(--sans); font-size: 0.82rem; font-weight: 600;
+            letter-spacing: 0.01em; cursor: pointer; text-decoration: none;
+            border: 1px solid transparent; transition: all 0.25s ease; white-space: nowrap;
+        }
+        .btn svg { width: 16px; height: 16px; }
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-primary svg { stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .btn-primary:hover { background: var(--accent-2); transform: translateY(-1px); box-shadow: 0 8px 20px -8px var(--ring); }
+        .btn-ghost { background: var(--surface); color: var(--text); border-color: var(--border); }
+        .btn-ghost svg { stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .btn-ghost:hover { border-color: var(--ring); color: var(--accent); }
+
+        /* ===== HERO ===== */
+        .hero {
+            margin-top: 40px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0; pointer-events: none;
+            background: radial-gradient(600px 200px at 100% 0%, var(--accent-soft), transparent 70%);
+        }
+        .hero-top { display: flex; gap: 32px; align-items: center; position: relative; }
+        .avatar-ring {
+            flex-shrink: 0; width: 132px; height: 132px; border-radius: 50%;
+            padding: 3px; background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            box-shadow: 0 12px 32px -12px var(--ring);
+        }
+        .avatar-ring img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; background: var(--surface-2); }
+        .hero-id { flex: 1; min-width: 0; }
+        .hero-kicker {
+            font-family: var(--mono); font-size: 0.72rem; font-weight: 500;
+            letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent);
+            margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
+        }
+        .hero-kicker .dot { width: 7px; height: 7px; border-radius: 50%; background: #22C55E; box-shadow: 0 0 0 3px rgba(34,197,94,0.2); }
+        .hero-name {
+            font-size: clamp(2rem, 5vw, 2.9rem); font-weight: 800; letter-spacing: -0.03em;
+            line-height: 1.05; color: var(--text); margin-bottom: 10px;
+        }
+        .hero-role { font-size: 1.15rem; font-weight: 600; color: var(--accent); margin-bottom: 4px; }
+        .hero-sub { font-size: 0.95rem; color: var(--text-2); }
+
+        .hero-contact { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; position: relative; }
+        .chip {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 8px 14px; border-radius: 999px;
+            background: var(--surface-2); border: 1px solid var(--border);
+            font-size: 0.82rem; color: var(--text-2); text-decoration: none;
+            transition: all 0.25s ease;
+        }
+        .chip svg { width: 15px; height: 15px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .chip.linkedin svg { fill: var(--accent); stroke: none; }
+        a.chip:hover { border-color: var(--ring); color: var(--text); transform: translateY(-1px); }
+
+        .hero-actions { display: flex; gap: 10px; margin-top: 24px; position: relative; }
+
+        .stats {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+            margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--border);
+            position: relative;
+        }
+        .stat { text-align: center; }
+        .stat-value { font-family: var(--mono); font-size: 2rem; font-weight: 600; color: var(--accent); letter-spacing: -0.02em; }
+        .stat-label { font-size: 0.78rem; color: var(--muted); margin-top: 4px; letter-spacing: 0.02em; }
+
+        /* ===== SECTION ===== */
+        .section { margin-top: 28px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow); }
+        .section-head { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+        .section-num { font-family: var(--mono); font-size: 0.78rem; font-weight: 600; color: var(--accent); }
+        .section-title { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text); }
+        .section-icon { width: 22px; height: 22px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+        /* ===== SKILLS ===== */
+        .skill-group { margin-bottom: 20px; }
+        .skill-group:last-child { margin-bottom: 0; }
+        .skill-cat {
+            font-family: var(--mono); font-size: 0.72rem; font-weight: 600;
+            letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-2);
+            margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
+        }
+        .skill-cat::before { content: ''; width: 14px; height: 2px; background: var(--accent); border-radius: 2px; }
+        .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag {
+            padding: 6px 13px; border-radius: 8px; font-size: 0.82rem; font-weight: 500;
+            background: var(--surface-2); border: 1px solid var(--border); color: var(--text);
+            transition: all 0.2s ease;
+        }
+        .tag:hover { border-color: var(--ring); color: var(--accent); transform: translateY(-1px); }
+        .tag.mono { font-family: var(--mono); font-size: 0.76rem; }
+
+        /* ===== EXPERIENCE ===== */
+        .exp-list { display: flex; flex-direction: column; gap: 12px; }
+        .exp {
+            border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
+            background: var(--surface); transition: border-color 0.25s ease;
+        }
+        .exp.open { border-color: var(--ring); }
+        .exp-head {
+            display: flex; align-items: flex-start; gap: 16px; padding: 18px 20px;
+            cursor: pointer; user-select: none;
+        }
+        .exp-marker {
+            flex-shrink: 0; width: 10px; height: 10px; margin-top: 6px; border-radius: 50%;
+            border: 2px solid var(--accent); background: var(--surface);
+        }
+        .exp.open .exp-marker { background: var(--accent); }
+        .exp-headmain { flex: 1; min-width: 0; }
+        .exp-title { font-size: 1rem; font-weight: 700; color: var(--text); line-height: 1.35; }
+        .exp-company { font-size: 0.9rem; font-weight: 600; color: var(--accent); margin-top: 3px; }
+        .exp-meta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px; font-family: var(--mono); font-size: 0.74rem; color: var(--muted); }
+        .exp-meta span { display: inline-flex; align-items: center; gap: 5px; }
+        .exp-meta svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .exp-toggle {
+            flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px;
+            display: inline-flex; align-items: center; justify-content: center;
+            color: var(--muted); transition: all 0.25s ease;
+        }
+        .exp-toggle svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.3s ease; }
+        .exp.open .exp-toggle { color: var(--accent); }
+        .exp.open .exp-toggle svg { transform: rotate(180deg); }
+
+        .exp-detail { display: none; padding: 0 20px 20px 46px; }
+        .exp.open .exp-detail { display: block; animation: reveal 0.35s ease; }
+        @keyframes reveal { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+
+        .mission { padding-top: 16px; margin-top: 16px; border-top: 1px dashed var(--border); }
+        .mission:first-child { padding-top: 0; margin-top: 0; border-top: none; }
+        .mission-title { font-size: 0.92rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+        .mission-desc { font-size: 0.85rem; color: var(--text-2); font-style: italic; margin-bottom: 10px; line-height: 1.6; }
+        .task-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+        .task-list li { position: relative; padding-left: 20px; font-size: 0.86rem; color: var(--text-2); line-height: 1.55; }
+        .task-list li::before { content: ''; position: absolute; left: 4px; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+        .usecase { margin-top: 12px; padding: 12px 14px; background: var(--accent-soft); border-radius: 10px; border: 1px solid var(--border); }
+        .usecase-label { font-family: var(--mono); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+        .usecase ul { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+        .usecase li { position: relative; padding-left: 18px; font-size: 0.82rem; color: var(--text-2); }
+        .usecase li::before { content: '›'; position: absolute; left: 4px; top: 0; color: var(--accent); font-weight: 700; }
+
+        /* ===== EDU + LANG ===== */
+        .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 28px; }
+        .duo .section { margin-top: 0; }
+        .edu-item { padding: 14px 16px; border-radius: 10px; background: var(--surface-2); border: 1px solid var(--border); margin-bottom: 12px; }
+        .edu-item:last-child { margin-bottom: 0; }
+        .edu-degree { font-size: 0.9rem; font-weight: 700; color: var(--text); line-height: 1.4; }
+        .edu-period { font-family: var(--mono); font-size: 0.72rem; color: var(--accent); margin: 4px 0; }
+        .edu-school { font-size: 0.82rem; color: var(--text-2); }
+        .lang-item { margin-bottom: 18px; }
+        .lang-item:last-child { margin-bottom: 0; }
+        .lang-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+        .lang-name { font-weight: 600; color: var(--text); font-size: 0.9rem; }
+        .lang-level { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); }
+        .lang-bar { height: 6px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+        .lang-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--accent-2), var(--accent)); }
+
+        /* ===== FOOTER ===== */
+        .foot { max-width: 940px; margin: 40px auto; padding: 0 24px; text-align: center; }
+        .foot-text { font-size: 0.8rem; color: var(--muted); }
+        .foot-text a { color: var(--accent); text-decoration: none; }
+        .foot-text a:hover { text-decoration: underline; }
+
+        .toast {
+            position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px);
+            background: var(--navy); color: #fff; font-size: 0.8rem; font-weight: 500;
+            padding: 12px 22px; border-radius: 10px; opacity: 0; pointer-events: none;
+            transition: all 0.35s ease; z-index: 100; box-shadow: var(--shadow);
+        }
+        .toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 640px) {
+            .hero { padding: 28px 22px; }
+            .hero-top { flex-direction: column; text-align: center; gap: 20px; }
+            .hero-kicker, .hero-contact, .hero-actions { justify-content: center; }
+            .avatar-ring { width: 108px; height: 108px; }
+            .section { padding: 24px 20px; }
+            .duo { grid-template-columns: 1fr; gap: 20px; }
+            .stat-value { font-size: 1.6rem; }
+            .exp-detail { padding-left: 20px; }
+            .nav-tag { display: none; }
+        }
+
+        /* ===== PRINT (A4) ===== */
+        @media print {
+            :root {
+                --bg: #fff; --surface: #fff; --surface-2: #f5f6f8; --text: #111; --text-2: #333;
+                --muted: #666; --border: #dcdfe3; --accent: #1d4ed8; --accent-2: #1e3a8a;
+                --accent-soft: #eef2ff; --shadow: none;
+            }
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            @page { size: A4 portrait; margin: 10mm; }
+            body { background: #fff; font-size: 10px; line-height: 1.35; }
+            .nav, .hero-actions, .exp-toggle, .toast { display: none !important; }
+            .wrap { max-width: 100%; padding: 0; }
+            .hero { margin-top: 0; padding: 12px; border-radius: 8px; box-shadow: none; page-break-inside: avoid; }
+            .hero::before { display: none; }
+            .avatar-ring { width: 74px; height: 74px; }
+            .hero-name { font-size: 1.5rem; }
+            .hero-role { font-size: 0.9rem; }
+            .hero-sub { font-size: 0.75rem; }
+            .hero-contact { margin-top: 10px; gap: 6px; }
+            .chip { padding: 3px 8px; font-size: 0.68rem; }
+            .stats { margin-top: 14px; padding-top: 12px; }
+            .stat-value { font-size: 1.2rem; }
+            .section { margin-top: 12px; padding: 12px; border-radius: 8px; box-shadow: none; }
+            .section-head { margin-bottom: 12px; break-after: avoid; page-break-after: avoid; }
+            .section-title { font-size: 1rem; }
+            .duo { gap: 12px; margin-top: 12px; }
+            .duo .section { break-inside: avoid; page-break-inside: avoid; }
+            .exp-detail { display: block !important; padding: 0 12px 12px 30px; }
+            .exp { break-inside: auto; page-break-inside: auto; margin-bottom: 8px; }
+            .exp-list { gap: 8px; }
+            .exp-head { padding: 10px 12px; break-inside: avoid; break-after: avoid; page-break-inside: avoid; page-break-after: avoid; }
+            .exp-title { font-size: 0.85rem; }
+            .exp-company { font-size: 0.78rem; }
+            .task-list li, .mission-desc { font-size: 0.72rem; }
+            .tag { padding: 3px 8px; font-size: 0.7rem; }
+            .mission { break-inside: avoid; page-break-inside: avoid; }
+            .mission + .mission { margin-top: 10px; }
+            .mission-title { break-after: avoid; page-break-after: avoid; }
+            .skill-group, .edu-item, .lang-item { break-inside: avoid; page-break-inside: avoid; }
+            .usecase { break-inside: avoid; page-break-inside: avoid; }
+            p, li { orphans: 2; widows: 2; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <div class="nav-brand">
+                <span class="nav-logo">GX2C</span>
+                <span class="nav-tag">Curriculum Vitæ</span>
+            </div>
+            <div class="nav-actions">
+                <button class="icon-btn" id="themeToggle" aria-label="Basculer le thème">
+                    <svg id="themeIcon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a class="btn btn-ghost" href="https://www.linkedin.com/in/yahyabenabdelkrim/" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </a>
+                <button class="btn btn-primary" id="printBtn">
+                    <svg viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1M12 4v12m0 0l-4-4m4 4l4-4"/></svg>
+                    PDF
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrap">
+        <!-- HERO -->
+        <header class="hero">
+            <div class="hero-top">
+                <div class="avatar-ring">
+                    <img src="https://raw.githubusercontent.com/yahys/CV/main/IMG_5847.jpg" alt="Yahya Benabdelkrim" loading="eager" width="132" height="132">
+                </div>
+                <div class="hero-id">
+                    <div class="hero-kicker"><span class="dot"></span>Disponible · Freelance</div>
+                    <h1 class="hero-name">Yahya Benabdelkrim</h1>
+                    <p class="hero-role">Consultant Freelance en Stratégie &amp; Transformation SI</p>
+                    <p class="hero-sub">Stratégie, PMO, Conduite du Changement · Finance &amp; Innovation IA</p>
+                </div>
+            </div>
+
+            <div class="hero-contact">
+                <a class="chip" href="tel:+33699233220"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+33 6 99 23 32 20</a>
+                <a class="chip" href="mailto:benabdelkrim.yahya@gmail.com"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>benabdelkrim.yahya@gmail.com</a>
+                <span class="chip"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Boulogne-Billancourt</span>
+                <a class="chip linkedin" href="https://www.linkedin.com/in/yahyabenabdelkrim/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>linkedin.com/in/yahyabenabdelkrim</a>
+            </div>
+
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="https://www.linkedin.com/in/yahyabenabdelkrim/" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="#fff" stroke="none"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    Voir LinkedIn
+                </a>
+                <button class="btn btn-ghost" id="printBtn2">
+                    <svg viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1M12 4v12m0 0l-4-4m4 4l4-4"/></svg>
+                    Télécharger le CV (PDF)
+                </button>
+            </div>
+
+            <div class="stats" id="stats"></div>
+        </header>
+
+        <!-- SKILLS -->
+        <section class="section">
+            <div class="section-head">
+                <span class="section-num">01</span>
+                <svg class="section-icon" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+                <h2 class="section-title">Compétences</h2>
+            </div>
+            <div id="skills"></div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="section">
+            <div class="section-head">
+                <span class="section-num">02</span>
+                <svg class="section-icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                <h2 class="section-title">Expériences professionnelles</h2>
+            </div>
+            <div class="exp-list" id="experiences"></div>
+        </section>
+
+        <!-- EDU + LANG -->
+        <div class="duo">
+            <section class="section">
+                <div class="section-head">
+                    <span class="section-num">03</span>
+                    <svg class="section-icon" viewBox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg>
+                    <h2 class="section-title">Formation</h2>
+                </div>
+                <div id="education"></div>
+            </section>
+            <section class="section">
+                <div class="section-head">
+                    <span class="section-num">04</span>
+                    <svg class="section-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/></svg>
+                    <h2 class="section-title">Langues</h2>
+                </div>
+                <div id="languages"></div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="foot">
+        <p class="foot-text">© 2026 Yahya Benabdelkrim · <a href="https://ybcparis.com">ybcparis.com</a> · Advisory · Technology · Intelligence</p>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+
+    <script is:inline>
+    const skills = {
+        strategy: ["Gouvernance de programmes", "Pilotage exécutif (CODIR)", "Conduite du changement", "Gestion des risques", "PMP/PMI", "Cadrage stratégique"],
+        finance: ["Finance de marché", "Trésorerie", "Gestion de dette", "Risk Management", "Middle-Office", "EMIR", "IFRS 9"],
+        transformation: ["Architecture SI", "Migration Cloud/SaaS", "ETL & Intégration", "RPA & Automatisation", "Communications bancaires"],
+        ia: ["Intelligence Artificielle (IA)", "Fine-tuning", "Hugging Face", "VLLM", "Runpod", "Comfy"],
+        outils: ["TitanTreasury", "Kondor+ KTP", "Bloomberg", "Eikon Refinitiv", "DataScope Refinitiv", "KYRIBA", "SAP S4/HANA", "Qualiac", "Business Objects", "3SKEY", "CASHSOLUTIONS", "CUBICUS", "ADIORYX", "WYNBE", "Open Trade", "Flex pro"]
+    };
+
+    const experiences = [
+        { id: 1, company: "Société des Grands Projets (Grand Paris Express)", title: "PMO Programme IA", period: "Janvier 2026 - Présent", location: "Paris",
+          missions: [ { title: "Pilotage stratégique du programme Intelligence Artificielle", description: "Dans le cadre de la stratégie de modernisation de la SGP, lancement d'un programme IA visant à optimiser les processus métiers et la prise de décision.", tasks: [ "Cadrage du programme IA : identification des cas d'usage prioritaires, définition de la feuille de route stratégique et du modèle de gouvernance", "Animation des instances de pilotage et coordination des parties prenantes (Direction Générale, DSI, métiers)", "Pilotage de la trajectoire de déploiement : suivi des jalons, gestion des risques programme, reporting aux sponsors" ] } ] },
+        { id: 2, company: "Confidentiel", title: "Directeur de Projets – Stratégie & Innovation", period: "Mars 2025 - Présent", location: "Paris",
+          missions: [ { title: "Cadrage et pilotage stratégique d'un programme Innovation (IA, Marketing Digital, SI)", description: "Structuration et pilotage d'un programme transverse combinant IA, marketing digital et systèmes d'information pour le lancement d'un nouveau produit.", tasks: [ "Définition de la stratégie programme : vision produit, modèle opérationnel cible, feuille de route", "Stratégie IA : identification et priorisation des cas d'usage, cadrage des MVP, arbitrages technologiques (Hugging Face, VLLM, Runpod, Comfy)", "Stratégie d'acquisition : positionnement marché, messages clés, plan d'acquisition digitale", "Gouvernance programme : structuration des instances de pilotage, coordination transverse des équipes, suivi budgétaire" ] } ] },
+        { id: 3, company: "Éditeur de logiciels TMS", title: "Consultant Stratégie & Management de Projet | 3V FINANCE", period: "Février 2025", location: "Paris",
+          missions: [ { title: "Cadrage méthodologique d'un programme de déploiement TMS", description: "Structuration du cadre de gouvernance et des livrables de pilotage pour un programme de déploiement Treasury Management System, du cadrage stratégique à la mise en run.", tasks: [ "Élaboration du référentiel de pilotage programme (standards PMP/PMI) : plan de management de projet, modèle de gouvernance, stratégie de gestion des risques", "Définition de la stratégie de conduite du changement et du plan de déploiement", "Accompagnement de la direction programme dans la structuration de la trajectoire d'implémentation" ] } ] },
+        { id: 4, company: "Société des Grands Projets (Grand Paris Express)", title: "Consultant Senior Stratégie & Transformation SI | Société des Grands Projets | EY & ARTIMON", period: "Mars 2022 - Janvier 2025", location: "Saint-Denis (93)",
+          missions: [
+            { title: "Stratégie TMS & pilotage du dispositif TitanTreasury", description: "Enjeu : la SGP, maître d'ouvrage du Grand Paris Express, a besoin d'un SI Finance robuste pour piloter un modèle de financement de plusieurs milliards d'euros (dette, risque, trésorerie). Définition et mise en œuvre de la stratégie d'évolution du TMS.", tasks: [ "Diagnostic de l'existant et définition du modèle opérationnel cible du TMS", "Cadrage des besoins métiers en lien avec la Direction Finance et la Direction des Risques", "Gouvernance du dispositif : animation des comités de pilotage stratégiques, reporting aux sponsors Direction Finance et DSI", "Pilotage de la trajectoire d'évolution : priorisation du backlog, coordination des éditeurs et intégrateurs", "Accompagnement au changement et pilotage de la mise en run" ], useCases: [ "Gestion des frais financiers prévisionnels", "Déploiement du module de comptabilité auxiliaire", "Refonte du dispositif d'interfaces comptables vers SAP", "Refonte du modèle de prévisions de trésorerie (court/moyen/long terme)", "Structuration des prêts intragroupes" ] },
+            { title: "Programme de déploiement SAP S4/HANA (FM, CO/PS, MM, FI)", description: "Enjeu : la filiale SGP Dev, créée pour valoriser les savoir-faire du Grand Paris Express, avait besoin d'un socle de gestion financière intégré pour supporter sa croissance.", tasks: [ "Cadrage stratégique : analyse des besoins métiers, définition du périmètre fonctionnel cible, feuille de route de déploiement", "Gouvernance programme : animation des comités de pilotage, coordination des équipes intégrateurs, métiers et DSI", "Pilotage de la trajectoire de déploiement : stratégie de recette, accompagnement au changement, bascule et stabilisation" ] },
+            { title: "Optimisation de la chaîne de dépense fournisseurs", description: "Enjeu : réduire les dysfonctionnements de la chaîne Achats-Finance-Comptabilité impactant les délais de paiement et la relation fournisseurs.", tasks: [ "Audit des processus métiers de bout en bout : cartographie des irritants, analyse des causes racines", "Recommandations stratégiques : scénarios de transformation, arbitrages automatisation vs. renforcement d'équipes", "Pilotage de la mise en œuvre : déploiement des solutions d'automatisation et refonte des processus" ] },
+            { title: "Plan de résilience SI Salle des Marchés (PRA/PCA)", description: "Enjeu : garantir la continuité des activités critiques de la Salle des Marchés en cas d'incident majeur, en conformité avec les obligations réglementaires.", tasks: [ "Diagnostic de l'existant : cartographie des risques, analyse d'impacts métier (BIA)", "Définition de l'architecture de résilience cible et du modèle opérationnel de reprise" ] },
+            { title: "Plan de Continuité Métiers (PCM) & sécurisation de la trajectoire ERP", description: "Enjeu : en pleine migration Qualiac vers SAP S4/HANA, garantir la continuité de service des domaines Achats, Finance et Comptabilité pendant la période de transition.", tasks: [ "Analyse de criticité des flux métiers par domaine (Achats, Finance, Comptabilité)", "Définition et déploiement du plan de gestion de crise : scénarios dégradés, procédures de bascule, dispositifs palliatifs", "Gouvernance de la période de transition : reporting aux instances, gestion des risques programme" ] }
+          ] },
+        { id: 5, company: "SNCF SA", title: "Consultant Senior Stratégie SI Finance | SNCF SA | Thémis Conseil & Bartle", period: "Janvier 2020 - Février 2022", location: "Saint-Denis (93)",
+          missions: [
+            { title: "Transformation SI 1 Émetteur — alignement post-Réforme Ferroviaire", description: "Enjeu stratégique : suite à la Réforme Ferroviaire de 2020 (séparation SNCF SA / SNCF Réseau), redéfinition et déploiement du modèle SI cible pour aligner avec la politique d'émission obligataire unique sur les marchés financiers.", tasks: [ "Cadrage stratégique : définition du schéma directeur SI Finance de Marché post-réforme, analyse d'impacts organisationnels et réglementaires", "Gouvernance de la transformation : animation des comités de pilotage DSI et Direction Finance & Trésorerie, reporting aux instances exécutives", "Pilotage de la trajectoire de migration : migration des référentiels et stocks d'opérations vers le SI cible, décommissionnement du SI legacy", "Accompagnement au changement et pilotage de la mise en run" ] },
+            { title: "Structuration du Cashpooling Multi-Entités Holding/Filiales", description: "Enjeu : structurer le dispositif de gestion centralisée de la trésorerie groupe (prêts/emprunts, cashpooling) dans le cadre de la nouvelle organisation post-réforme.", tasks: [ "Définition du modèle opérationnel cible : processus de prêts/emprunts et cashpooling inter-entités dans KTP", "Gouvernance du chantier : animation des comités, coordination des acteurs Métiers, DSI et éditeurs", "Pilotage de l'intégration SI : évolution des interfaces amont/aval (Sage XRT, Sage Rappro, PeopleSoft GL)", "Validation fonctionnelle de bout en bout et mise en production" ] },
+            { title: "Refonte du dispositif de contrôle des risques financiers", description: "Enjeu : doter le Middle-Office d'un outil unique de pilotage des risques financiers, reflétant la stratégie de gestion des risques validée en Conseil d'Administration.", tasks: [ "Modélisation des processus métiers cibles de contrôle des risques", "Conception du dispositif d'alimentation : DataScope (données de marché) → ETL Xchange → TITAN (référentiel de gestion)", "Pilotage du déploiement, documentation de référence, accompagnement au changement" ] },
+            { title: "Stratégie de migration Cloud — TITAN SaaS", description: "Enjeu : dans le cadre de la rationalisation de l'infrastructure SI Trésorerie, migration de TITAN vers un modèle SaaS (décommissionnement de l'infogérant dédié).", tasks: [ "Définition de la stratégie de migration et du plan de bascule", "Pilotage de la recette applicative et validation des interfaces" ] },
+            { title: "Transformation des flux de paiement — migration CashSolutions vers Kyriba", description: "Enjeu : décommissionnement de la centrale de paiements historique et migration de l'ensemble des flux financiers et prévisions de trésorerie vers Kyriba.", tasks: [ "Analyse d'impacts stratégique : cartographie des flux, évaluation du changement de standards bancaires (MT101 vers AFB320/160)", "Conception du nouveau modèle d'échanges : spécification des interfaces TITAN / Kyriba, développement des flux dans l'ETL Xchange", "Gouvernance du déploiement : coordination éditeurs, banques et équipes internes, recette de bout en bout" ] },
+            { title: "Pilotage du changement de banque principale", description: "Enjeu : évolution de l'ensemble du dispositif SI Finance pour absorber le changement du compte financier principal de SNCF SA.", tasks: [ "Étude d'impacts sur l'ensemble de la chaîne SI Finance", "Facilitation des workshops de convergence DSI/Métiers", "Pilotage des évolutions applicatives et validation fonctionnelle" ] },
+            { title: "Mise en conformité réglementaire — transition LIBOR (Risk Free Rates)", description: "Enjeu réglementaire : adaptation du SI Finance aux nouvelles exigences liées à la disparition des taux LIBOR et la transition vers les Risk Free Rates.", tasks: [ "Analyse d'impacts réglementaires sur l'ensemble de la chaîne SI (TITAN, KTP, DataScope)", "Coordination avec les éditeurs pour les montées de version applicatives", "Pilotage de la recette fonctionnelle et accompagnement au changement" ] }
+          ] },
+        { id: 6, company: "SNCF Réseau", title: "Consultant Transformation SI Trésorerie & Salle des Marchés | SNCF Réseau | EDP", period: "Janvier 2018 - Janvier 2020", location: "Saint-Denis (93)",
+          missions: [
+            { title: "Gouvernance & MCO du périmètre SI Trésorerie et Salle des Marchés", description: "Responsabilité complète du périmètre applicatif SI Trésorerie & Salle des Marchés : gouvernance opérationnelle, gestion de la relation éditeurs/banques et pilotage du backlog d'évolutions.", tasks: [ "Pilotage opérationnel du périmètre : gouvernance des applications, support N2, gestion des incidents critiques", "Management de la relation partenaires : coordination des éditeurs (TITAN, DataScope) et des partenaires bancaires", "Gestion du portefeuille d'évolutions : priorisation du backlog, arbitrages et reporting" ] },
+            { title: "Programme d'industrialisation des données de marché", description: "Enjeu : moderniser et fiabiliser le dispositif d'alimentation en données de marché pour l'ensemble du SI Trésorerie (courbes de taux, fixings, données financières).", tasks: [ "Cadrage stratégique : analyse des besoins, définition de l'architecture cible d'alimentation en données de marché", "Pilotage du déploiement de DataScope Refinitiv : paramétrage des courbes de taux et fixings, ordonnancement des flux", "Négociation et contractualisation avec les fournisseurs de données de marché", "Intégration de bout en bout avec l'ensemble des applications du SI, recette et mise en production" ] },
+            { title: "Refonte du dispositif d'interfaces financières (décommissionnement ETL DataStage)", description: "Enjeu : modernisation de la couche d'intégration SI par le remplacement de l'ETL historique DataStage, impactant l'ensemble des flux d'opérations financières.", tasks: [ "Cadrage du programme : analyse d'impacts, définition du périmètre de migration", "Rédaction des spécifications fonctionnelles, pilotage des développements", "Stratégie de recette, déploiement progressif et mise en production" ] },
+            { title: "Appel d'offres européen (JOUE) — solution de téléphonie de marché", description: "Enjeu : remplacement de la solution de téléphonie de la Salle des Marchés dans le respect du cadre réglementaire des marchés publics européens.", tasks: [ "Cadrage stratégique : analyse du besoin, benchmark des solutions du marché", "Rédaction du cahier des charges pour publication au Journal Officiel de l'Union Européenne (JOUE)", "Analyse des offres et aide à la décision pour le choix de la solution cible" ] },
+            { title: "Rationalisation du portefeuille de licences Salle des Marchés", description: "Optimisation des coûts et de l'adéquation besoin/service sur le périmètre des licences logicielles de la Salle des Marchés.", tasks: [ "Audit du portefeuille contractuel : revue des contrats, analyse de l'usage réel vs. souscrit", "Recommandations d'optimisation : adaptation des services et négociation avec les éditeurs" ] },
+            { title: "Benchmark Credit Management — sélection d'une solution de remplacement", description: "Sourcing et évaluation des solutions de Credit Management en remplacement de la solution existante.", tasks: [ "Benchmark des acteurs du marché et analyse comparative", "Lancement et pilotage du processus de Request For Information (RFI)" ] },
+            { title: "Refonte des processus d'habilitations SI", description: "Renforcement de la gouvernance des accès SI dans un contexte de conformité et d'audit.", tasks: [ "Diagnostic des processus existants et identification des risques de conformité", "Définition des nouveaux workflows de validation et proposition de solutions d'automatisation" ] },
+            { title: "Conformité & audit — accompagnement des Commissaires aux Comptes", description: "Support aux audits annuels des Commissaires aux Comptes sur le périmètre SI Trésorerie & Salle des Marchés.", tasks: [ "Pilotage des demandes auditeurs : collecte, consolidation et mise à disposition des livrables", "Interface entre les équipes internes (DSI, Finance) et les auditeurs externes" ] }
+          ] },
+        { id: 7, company: "Sodexo", title: "Responsable Applicatifs FM | Beijaflore", period: "Octobre 2017 - Décembre 2017", location: "Guyancourt (78)",
+          missions: [ { title: "Gouvernance applicative et déploiement — périmètre Facilities Management", description: "Prise en charge du périmètre applicatif Facilities Management au sein de la DSI Sodexo (Premium, Premium SED, Portails Joomla, Urba). Double mission de MCO et de conduite de projets de déploiement.", tasks: [ "Gouvernance du périmètre applicatif : pilotage des évolutions, gestion du backlog, suivi des SLA éditeurs", "Conduite des projets de déploiement : animation des ateliers métiers, cadrage des besoins, pilotage des paramétrages", "Stratégie de recette et validation de bout en bout, accompagnement à la mise en production", "Accompagnement au changement : plans de formation, documentation, support N2" ] } ] },
+        { id: 8, company: "SNCF Réseau", title: "Consultant AMOA SI | Beijaflore", period: "Avril 2017 - Septembre 2017", location: "Saint-Denis (93)",
+          missions: [
+            { title: "Pilotage de la transformation SI comptable — décommissionnement JD Edwards", description: "Enjeu : migration du SI comptable amont (JD Edwards vers PeopleSoft) avec impact direct sur l'application de Credit Management Wynbe. Projet multi-acteurs nécessitant une coordination étroite entre les équipes internes, l'éditeur et la DSI.", tasks: [ "Pilotage du projet et coordination des parties prenantes (métiers, éditeur, DSI)", "Animation des instances de gouvernance (comités projet, comités de pilotage)", "Définition de la stratégie de recette, pilotage de la recette de bout en bout", "Conduite du changement : formations utilisateurs, accompagnement à la bascule" ] },
+            { title: "Veille réglementaire et structuration documentaire", description: "Production de la documentation de référence et veille sur les évolutions réglementaires impactant le SI Finance.", tasks: [ "Rédaction du guide utilisateur Front-to-Back de TitanTreasury", "Veille réglementaire (IFRS 9, EMIR) : analyse des impacts sur le SI et anticipation des évolutions" ] }
+          ] },
+        { id: 9, company: "American Express Global Business Travel", title: "Assistant Project Manager", period: "Avril 2016 - Septembre 2016", location: "Rueil-Malmaison (92)",
+          missions: [ { title: "Coordination de programmes événementiels internationaux — secteur pharmaceutique", description: "Pilotage opérationnel d'événements à échelle internationale pour les leaders mondiaux du secteur pharmaceutique.", tasks: [ "Cadrage des besoins clients et structuration des propositions", "Pilotage de la relation parties prenantes : négociation, coordination multi-pays", "Gestion des appels d'offres fournisseurs, logistique internationale", "Suivi budgétaire et pilotage de la refacturation" ] } ] },
+        { id: 10, company: "Art Déco & Mobilier", title: "Assistant Responsable Des Achats", period: "Juin 2014 - Septembre 2014", location: "France",
+          missions: [ { title: "Assistance à la gestion des achats", tasks: [ "Accompagnement du Responsable Achats dans la gestion opérationnelle", "Suivi des commandes et relation fournisseurs" ] } ] }
+    ];
+
+    const education = [
+        { degree: "Master 2 Systèmes d'information pour la finance de marché", school: "Institut Mines Télécom (Business School) - Evry, France", period: "2013-2017" },
+        { degree: "Mentor Language Institute", school: "Los Angeles, États-Unis", period: "2015-2016" },
+        { degree: "Classe Préparatoire aux Grandes Écoles de Commerce ECT", school: "École Nationale de Commerce - Paris, France", period: "2011-2013" },
+        { degree: "Baccalauréat STG option Comptabilité et Finance d'Entreprise", school: "Lycée Jean-Pierre Vernant - Sèvres, France", period: "2010-2011" }
+    ];
+
+    const languages = [
+        { lang: "Français", level: "Langue maternelle", percent: "100%" },
+        { lang: "Anglais", level: "C1", percent: "80%" },
+        { lang: "Espagnol", level: "Intermédiaire", percent: "60%" }
+    ];
+
+    const stats = [
+        { label: "Ans d'expérience", value: "9" },
+        { label: "Projets menés", value: "50+" },
+        { label: "Domaines", value: "4" }
+    ];
+
+    const skillCats = [
+        { title: "Conseil & Stratégie", items: skills.strategy },
+        { title: "Finance de Marché", items: skills.finance },
+        { title: "Transformation SI", items: skills.transformation },
+        { title: "Intelligence Artificielle", items: skills.ia },
+        { title: "Outils & Plateformes", items: skills.outils, mono: true }
+    ];
+
+    const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+    document.getElementById("stats").innerHTML = stats.map(s =>
+        `<div class="stat"><div class="stat-value">${esc(s.value)}</div><div class="stat-label">${esc(s.label)}</div></div>`).join("");
+
+    document.getElementById("skills").innerHTML = skillCats.map(c =>
+        `<div class="skill-group"><div class="skill-cat">${esc(c.title)}</div><div class="chips">${
+            c.items.map(i => `<span class="tag${c.mono ? " mono" : ""}">${esc(i)}</span>`).join("")
+        }</div></div>`).join("");
+
+    document.getElementById("experiences").innerHTML = experiences.map(exp => {
+        const detail = exp.missions.map(m => {
+            const desc = m.description ? `<p class="mission-desc">${esc(m.description)}</p>` : "";
+            const tasks = `<ul class="task-list">${m.tasks.map(t => `<li>${esc(t)}</li>`).join("")}</ul>`;
+            const uc = m.useCases ? `<div class="usecase"><div class="usecase-label">Cas d'usage</div><ul>${m.useCases.map(u => `<li>${esc(u)}</li>`).join("")}</ul></div>` : "";
+            return `<div class="mission"><div class="mission-title">${esc(m.title)}</div>${desc}${tasks}${uc}</div>`;
+        }).join("");
+        return `<div class="exp" data-id="${exp.id}">
+            <div class="exp-head">
+                <span class="exp-marker"></span>
+                <div class="exp-headmain">
+                    <div class="exp-title">${esc(exp.title)}</div>
+                    <div class="exp-company">${esc(exp.company)}</div>
+                    <div class="exp-meta">
+                        <span><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>${esc(exp.period)}</span>
+                        <span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>${esc(exp.location)}</span>
+                    </div>
+                </div>
+                <span class="exp-toggle"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+            </div>
+            <div class="exp-detail">${detail}</div>
+        </div>`;
+    }).join("");
+
+    document.getElementById("education").innerHTML = education.map(e =>
+        `<div class="edu-item"><div class="edu-degree">${esc(e.degree)}</div><div class="edu-period">${esc(e.period)}</div><div class="edu-school">${esc(e.school)}</div></div>`).join("");
+
+    document.getElementById("languages").innerHTML = languages.map(l =>
+        `<div class="lang-item"><div class="lang-top"><span class="lang-name">${esc(l.lang)}</span><span class="lang-level">${esc(l.level)}</span></div><div class="lang-bar"><div class="lang-fill" style="width:${l.percent}"></div></div></div>`).join("");
+
+    // Accordion: first experience open by default
+    const expEls = document.querySelectorAll(".exp");
+    if (expEls[0]) expEls[0].classList.add("open");
+    expEls.forEach(el => {
+        el.querySelector(".exp-head").addEventListener("click", () => el.classList.toggle("open"));
+    });
+
+    // Print / PDF
+    function printCV() {
+        document.querySelectorAll(".exp").forEach(el => el.classList.add("open"));
+        setTimeout(() => window.print(), 120);
+    }
+    document.getElementById("printBtn").addEventListener("click", printCV);
+    document.getElementById("printBtn2").addEventListener("click", printCV);
+
+    // Theme toggle
+    const root = document.documentElement;
+    const themeIcon = document.getElementById("themeIcon");
+    const sunPath = "M12 3v1m0 16v1m9-9h-1M4 12H3m15.36 6.36l-.7-.7M6.34 6.34l-.7-.7m12.72 0l-.7.7M6.34 17.66l-.7.7M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z";
+    const moonPath = "M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z";
+    const saved = localStorage.getItem("gx2c_cv_theme");
+    if (saved) root.setAttribute("data-theme", saved);
+    const syncIcon = () => { themeIcon.innerHTML = `<path d="${root.getAttribute("data-theme") === "dark" ? sunPath : moonPath}"/>`; };
+    syncIcon();
+    document.getElementById("themeToggle").addEventListener("click", () => {
+        const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        localStorage.setItem("gx2c_cv_theme", next);
+        syncIcon();
+    });
+    </script>
+</body>
+</html>
